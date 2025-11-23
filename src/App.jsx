@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 import Navbar from "./pages/Navbar.jsx";
 import Hero from "./pages/Hero.jsx";
@@ -18,6 +19,7 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Navbar />
 
       <Routes>
