@@ -4,13 +4,13 @@ import { HardHat, ShieldCheck, Calendar, Shield, Hospital, Factory } from 'lucid
    const services = [
     {
       icon: HardHat,
-      title: 'Fiancial Security',
-      description: 'Specialized Security Services For Bank, Finacial Institutions and cash-in transits.',
+      title: 'Finacial Security',
+      description: 'Specialized Security Services For Finacial Institutions.',
     },
     {
       icon: ShieldCheck,
-      title: 'Residential Security',
-      description: 'Professional Guard Services For Residential.',
+      title: 'Residential',
+      description: 'Professional Guard Services For Residentials.',
     },
     {
       icon: Calendar,
@@ -25,7 +25,7 @@ import { HardHat, ShieldCheck, Calendar, Shield, Hospital, Factory } from 'lucid
     {
       icon: Hospital,
       title: 'Healthcare Security',
-      description: 'Dedicated security solutions for hospitals,clinics and healthcare facilities.',
+      description: 'Dedicated security solutions for hospitals and healthcare facilities.',
     },
     {
       icon: Factory,
@@ -47,7 +47,7 @@ const Service = () => {
       <section id="services" className="py-12 mt-20 sm:py-16 md:py-10 px-4 sm:px-6 bg-white scroll-mt-20">
       <div className="w-11/12 mx-auto">
        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl  font-extrabold text-[#291a06] tracking-tight">
+          <h2 className="text-4xl lg:text-5xl animate__animated  animate__backInDown  font-extrabold text-[#291a06] tracking-tight">
             Services
           </h2>
 
@@ -58,7 +58,7 @@ const Service = () => {
             <div className="w-20 h-1 bg-[#0C2B63] rounded-full"></div>
             <div className="w-20 h-1 bg-gray-300 rounded-full"></div>
           </div>
-          <h3 className='text-xl font-bold '>Comprehensive Security Solutions </h3>
+          <h3 className='text-xl animate__animated  animate__backInDown font-bold '>Comprehensive Security Solutions </h3>
          <p className='text-medium'>
            From Corporate Offices To Residential Estates.We Provide Tailored Security Services To Meet Diverse Client Needs. 
          </p>

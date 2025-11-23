@@ -9,10 +9,10 @@ const About = () => {
     <section className="container mx-auto px-4 py-20 mt-20">
       {/* Header */}
       <div className="text-center mb-14">
-        <h2 className="text-4xl lg:text-5xl font-bold text-[#0c2b63] tracking-tight">
+        <h2 className="text-4xl lg:text-5xl font-bold animate__animated  animate__backInDown text-[#0c2b63] tracking-tight">
            Ashaka Security Company
         </h2>
-        <h2 className="text-4xl lg:text-5xl font-bold text-[#0c2b63] tracking-tight">
+        <h2 className="text-4xl lg:text-5xl animate__animated  animate__backInDown font-bold text-[#0c2b63] tracking-tight">
           (ASCO) Limited
         </h2>
         <p className="text-gray-600 text-lg mt-3 max-w-2xl mx-auto">

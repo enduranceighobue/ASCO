@@ -29,10 +29,10 @@ const Products = () => {
       
       {/* Page Title */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0c2b63] tracking-tight">
+        <h2 className="text-4xl lg:text-5xl animate__animated  animate__backInDown font-extrabold text-[#0c2b63] tracking-tight">
           Our Products
         </h2>
-        <p className="text-gray-600 mt-2">
+        <p className="text-gray-600 animate__animated  animate__backInDown mt-2">
           Explore Our Range Of High-Quality Electronic Security Products.
         </p>
 

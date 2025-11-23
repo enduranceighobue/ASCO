@@ -9,7 +9,7 @@ const Contact = () => {
     <section className="container mx-auto px-4 py-20 mt-20">
       {/* Page Header */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-extrabold text-[#0c2b63] tracking-tight">
+        <h2 className="text-4xl lg:text-5xl animate__animated  animate__backInDown font-extrabold text-[#0c2b63] tracking-tight">
           Get In Touch With Us
         </h2>
         <p className="text-gray-600 mt-4 text-lg">

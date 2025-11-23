@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import heroimg from "../assets/hero.png";
 
@@ -39,19 +39,19 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 items-start mb-16">
-            <button
+       <Link to=""><button
               onClick={scrollToDemo}
-              className="bg-[#0C2B63] text-white px-8 py-4 hover:bg-blue-100 hover:text-blue-800 transition-all duration-300 font-semibold text-lg flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              className="bg-[#0C2B63] text-white cursor-pointer px-8 py-4 hover:bg-blue-100 hover:text-blue-800 transition-all duration-300 font-semibold text-lg flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Get A Quote
               <ArrowRight className="h-5 w-5" />
-            </button>
+            </button></Link> 
 
-            <button
-              className="text-white hover:text-blue-800 font-semibold text-lg border-2 border-white px-8 py-4 hover:bg-white transition-all duration-300"
+         <Link to="/service"><button
+              className="text-white hover:text-blue-800 cursor-pointer font-semibold text-lg border-2 border-white px-8 py-4 hover:bg-white transition-all duration-300"
             >
               Our Services
-            </button>
+            </button></Link>
           </div>
 
         </div>
