@@ -10,37 +10,48 @@ const Navbar = () => {
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(false);
 
   const dropdownRef = useRef(null);
+  const mobileMenuRef = useRef(null);
 
   // Scroll background effect
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close desktop dropdown on outside click
+  // Close menus when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
+      // Desktop dropdown
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsProductsOpen(false);
       }
+
+      // Mobile menu & dropdown
+      if (
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target)
+      ) {
+        setIsMobileMenuOpen(false);
+        setIsMobileProductsOpen(false);
+      }
     };
+
     document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
-  // Smooth scroll to section
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
-    }
+  const closeAllMenus = () => {
+    setIsMobileMenuOpen(false);
+    setIsMobileProductsOpen(false);
+    setIsProductsOpen(false);
   };
 
-  // Styling shortcut
   const linkStyle = isScrolled
     ? "text-black hover:text-[#0281bc]"
     : "text-white hover:text-gray-200";
@@ -53,52 +64,54 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6">
         <div className="relative flex items-center justify-between h-20">
-
+          
           {/* LOGO */}
-         <Link to="/"> <img
-            src={logo}
-            alt="Logo"
-            className="w-16 h-16 object-cover rounded-full cursor-pointer"
-          /></Link> 
+          <Link to="/" onClick={closeAllMenus}>
+            <img
+              src={logo}
+              alt="Logo"
+              className="w-16 h-16 object-cover rounded-full cursor-pointer"
+            />
+          </Link>
 
           {/* DESKTOP NAV */}
-          <nav className="hidden md:flex items-center cursor-pointer space-x-8 absolute left-1/2 transform -translate-x-1/2">
+          <nav className="hidden md:flex items-center space-x-8 absolute left-1/2 -translate-x-1/2">
 
-            {/* Separate Links */}
-       <Link to="/">    <button  onClick={() => scrollToSection("Home")} className={`font-medium cursor-pointer ${linkStyle}`}>
-              Home
-            </button></Link> 
+            <Link to="/" onClick={closeAllMenus}>
+              <button className={`font-medium ${linkStyle}`}>Home</button>
+            </Link>
 
-        <Link to="/About">   <button  onClick={() => scrollToSection("About")} className={`font-medium cursor-pointer ${linkStyle}`}>
-              About
-            </button></Link> 
+            <Link to="/about" onClick={closeAllMenus}>
+              <button className={`font-medium ${linkStyle}`}>About</button>
+            </Link>
 
-       <Link  to="/Service">        <button  onClick={() => scrollToSection("Services")} className={`font-medium cursor-pointer ${linkStyle}`}>
-              Services
-            </button></Link> 
+            <Link to="/service" onClick={closeAllMenus}>
+              <button className={`font-medium ${linkStyle}`}>Services</button>
+            </Link>
 
-       <Link to="/contact">  <button   onClick={() => scrollToSection("Contact")} className={`font-medium cursor-pointer ${linkStyle}`}>
-              Contact
-            </button></Link>   
+            <Link to="/contact" onClick={closeAllMenus}>
+              <button className={`font-medium ${linkStyle}`}>Contact</button>
+            </Link>
 
-            {/* PRODUCTS DROPDOWN */}
+            {/* PRODUCTS DROPDOWN (Desktop) */}
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setIsProductsOpen(!isProductsOpen)}
-                className={`flex cursor-pointer items-center gap-1 font-medium ${linkStyle}`}
+                className={`flex items-center gap-1 font-medium ${linkStyle}`}
               >
                 Products <ChevronDown size={16} />
               </button>
 
-              {/* DROPDOWN ITEMS - SEPARATED */}
               {isProductsOpen && (
-                <div className="absolute cursor-pointer top-8 left-0 bg-white shadow-lg rounded-md w-52 py-3 z-50">
+                <div className="absolute top-8 left-0 bg-white shadow-lg rounded-md w-52 py-3 z-50">
 
-              <Link to="/products">       <button className="block cursor-pointer w-full text-left px-4 py-2 hover:bg-gray-100">
-                    Security Gadgets
-                  </button></Link>  
+                  <Link to="/products" onClick={closeAllMenus}>
+                    <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
+                      Security Gadgets
+                    </button>
+                  </Link>
 
-                  <button className="block cursor-pointer w-full text-left px-4 py-2 hover:bg-gray-100">
+                  <button className="block w-full text-left px-4 py-2 hover:bg-gray-100">
                     Alarm Systems
                   </button>
                 </div>
@@ -107,22 +120,25 @@ const Navbar = () => {
           </nav>
 
           {/* DESKTOP CALL BUTTON */}
-     <Link to="/contact">     <button
-            onClick={() => scrollToSection("Call")}
-            className={`hidden md:flex px-6 py-4 cursor-pointer rounded-md items-center gap-2 font-medium transition-colors ${
-              isScrolled
-                ? "bg-[#0C2B63] text-white hover:bg-[#046a97]"
-                : "bg-white text-black hover:bg-gray-200"
-            }`}
-          >
-            <Phone className="w-5 h-5 cursor-pointer" />
-            <span>Call Us</span>
-          </button></Link>
+          <Link to="/contact" onClick={closeAllMenus}>
+            <button
+              className={`hidden md:flex px-6 py-4 rounded-md items-center gap-2 font-medium transition-colors ${
+                isScrolled
+                  ? "bg-[#0C2B63] text-white hover:bg-[#046a97]"
+                  : "bg-white text-black hover:bg-gray-200"
+              }`}
+            >
+              <Phone className="w-5 h-5" />
+              <span>Call Us</span>
+            </button>
+          </Link>
 
           {/* MOBILE MENU BUTTON */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden ${isScrolled ? "text-[#0C2B63]" : "text-white"}`}
+            className={`md:hidden ${
+              isScrolled ? "text-[#0C2B63]" : "text-white"
+            }`}
           >
             {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}
           </button>
@@ -130,27 +146,29 @@ const Navbar = () => {
 
         {/* MOBILE MENU */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-md shadow-lg mt-2 rounded-lg p-5">
+          <div
+            ref={mobileMenuRef}
+            className="md:hidden bg-white/95 shadow-lg mt-2 rounded-lg p-5"
+          >
             <nav className="flex flex-col space-y-4">
 
-              {/* Separated Mobile Links */}
-      <Link to="/">       <button onClick={() => scrollToSection("Home")} className="text-black cursor-pointer text-left font-medium">
-                Home
-              </button></Link>
+              <Link to="/" onClick={closeAllMenus}>
+                <button className="text-black text-left font-medium">Home</button>
+              </Link>
 
-      <Link to="/about">        <button onClick={() => scrollToSection("About")} className="text-black cursor-pointer text-left font-medium">
-                About
-              </button></Link>
+              <Link to="/about" onClick={closeAllMenus}>
+                <button className="text-black text-left font-medium">About</button>
+              </Link>
 
-        <Link to="/service">     <button onClick={() => scrollToSection("Services")} className="text-black cursor-pointer text-left font-medium">
-                Services
-              </button></Link>
+              <Link to="/service" onClick={closeAllMenus}>
+                <button className="text-black text-left font-medium">Services</button>
+              </Link>
 
-         <Link to="/contact">    <button onClick={() => scrollToSection("Contact")} className="text-black cursor-pointer text-left font-medium">
-                Contact
-              </button></Link> 
+              <Link to="/contact" onClick={closeAllMenus}>
+                <button className="text-black text-left font-medium">Contact</button>
+              </Link>
 
-              {/* MOBILE PRODUCTS DROPDOWN */}
+              {/* MOBILE DROPDOWN */}
               <div>
                 <button
                   onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
@@ -162,26 +180,25 @@ const Navbar = () => {
                 {isMobileProductsOpen && (
                   <div className="mt-2 ml-4 flex flex-col space-y-3">
 
-         <Link to="/products">          <button className="text-left cursor-pointer hover:text-[#0281bc]">
-                      CCTV Cameras
-                    </button></Link> 
+                    <Link to="/products" onClick={closeAllMenus}>
+                      <button className="text-left hover:text-[#0281bc]">
+                        CCTV Cameras
+                      </button>
+                    </Link>
 
-                    <button className="text-left cursor-pointer hover:text-[#0281bc]">
+                    <button className="text-left hover:text-[#0281bc]">
                       Alarm Systems
                     </button>
-
-
                   </div>
                 )}
               </div>
 
-              {/* Mobile Call Button */}
-          <Link to="/contact">    <button
-                onClick={() => scrollToSection("Call")}
-                className="bg-[#0281bc] text-white px-6 py-3 cursor-pointer rounded-md w-fit"
-              >
-                Call Us
-              </button></Link>
+              {/* MOBILE CALL BUTTON */}
+              <Link to="/contact" onClick={closeAllMenus}>
+                <button className="bg-[#0281bc] text-white px-6 py-3 rounded-md w-fit">
+                  Call Us
+                </button>
+              </Link>
             </nav>
           </div>
         )}
