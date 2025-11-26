@@ -12,6 +12,9 @@ p{
   font-family: "Vend Sans", sans-serif;
 }
 
+body{
+  overflow-x: hidden;
+}
 
 
 

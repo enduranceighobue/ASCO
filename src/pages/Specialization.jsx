@@ -2,7 +2,8 @@ import React from "react";
 import guardk9 from "../assets/guardk9.jpeg";
 import guard from "../assets/guard.jpeg";
 import patrol from "../assets/patrol.jpeg";
-import kitted from "../assets/trainigguard.jpeg";;
+import kitted from "../assets/trainigguard.jpeg";
+import Clients from "./Clients";
 
 import { Shield, Dog, Briefcase, Building2, Car, Users } from "lucide-react";
 
@@ -50,7 +51,10 @@ const services = [
 ];
 
 export default function Specialization() {
+  
   return (
+    <>
+    <Clients/>
     <section className="w-full min-h-screen bg-[#f3f4f6] py-20 px-6 text-white">
       <div className=" container mx-auto max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide text-[#0c2b63]">Specialization</h2>
@@ -84,5 +88,6 @@ export default function Specialization() {
         ))}
       </div>
     </section>
+    </>
   );
 }
