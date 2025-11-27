@@ -15,7 +15,7 @@ const Hero = () => {
     <>
     <section
       id="home"
-      className="min-h-screen bg-cover bg-center bg-no-repeat shadow-2xl rounded-xl pt-20"
+      className="min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden shadow-2xl rounded-xl pt-20"
       style={{ backgroundImage: `url(${heroimg})` }}
     >
       <div className="container mx-auto px-6 py-20">

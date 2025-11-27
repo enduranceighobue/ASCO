@@ -22,7 +22,7 @@ const Growth = () => {
   const radius = 180;
 
   return (
-    <section className="min-h-screen w-full bg-[#0281bc] py-16 flex flex-col items-center px-6">
+    <section className="min-h-screen overflow-hidden w-full bg-[#0281bc] py-16 flex flex-col items-center px-6">
       <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight mb-5">
         Our Growth Story
       </h2>

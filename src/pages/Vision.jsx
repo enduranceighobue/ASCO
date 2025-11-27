@@ -3,7 +3,7 @@ import eyeImage from "../assets/eyeimage.jpg";
 
 const Vision = () => {
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-10 py-10 ">
+    <section className="overflow-hidden container mx-auto px-4 sm:px-6 lg:px-10 py-10 ">
       <div className="relative w-full flex flex-col md:flex-row items-start gap-10 p-10">
 
         {/* Left Border & Note */}
@@ -23,7 +23,7 @@ const Vision = () => {
 
           {/* MISSION Card (Bottom) */}
           {/* MISSION Card */}
-<div className="absolute bg-[#0a2342] text-white p-8 rounded-2xl shadow-2xl 
+<div className="absolute bg-[#0a2342] text-white p-8 overflow-hidden rounded-2xl shadow-2xl 
      w-[380px] md:w-[420px] left-10 top-16 relative">
 
   {/* Vertical Side Title */}
@@ -60,7 +60,7 @@ const Vision = () => {
 
 
           {/* VISION Card (Top) */}
-          <div className="absolute bg-yellow-400 text-gray-900 p-8 rounded-2xl shadow-2xl w-[450px] md:w-[420px] -left-8 -top-22 flex items-start gap-3">
+          <div className="absolute bg-yellow-400 overflow-hidden text-gray-900 p-8 rounded-2xl shadow-2xl w-[450px] md:w-[420px] -left-8 -top-22 flex items-start gap-3">
             
             {/* Eye Icon */}
             <img 

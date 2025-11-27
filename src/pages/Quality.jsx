@@ -23,7 +23,7 @@ const qualityCards = [
 
 const Quality = () => {
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className="container mx-auto px-4 overflow-hidden py-16">
       <div className="text-center mb-16">
         <h2 className="text-4xl lg:text-5xl font-bold text-[#0c2b63] tracking-tight">
           Quality Management System
@@ -56,7 +56,7 @@ const Quality = () => {
         </div>
 
         {/* RIGHT SIDE – IMAGE */}
-        <div className="md:w-1/2 flex justify-center">
+        <div className="md:w-1/2 flex justify-center overflow-hidden">
           <img
             src={qualityImage}
             alt="Quality Management"

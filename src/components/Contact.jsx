@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <>
     <Navbar/>
-    <section className="container mx-auto px-4 py-20 mt-20">
+    <section className="container mx-auto px-4 py-20 overflow-hidden mt-20">
       {/* Page Header */}
       <div className="text-center mb-16">
         <h2 className="text-4xl lg:text-5xl animate__animated  animate__backInDown font-extrabold text-[#0c2b63] tracking-tight">

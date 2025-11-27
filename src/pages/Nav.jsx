@@ -148,7 +148,7 @@ const Nav = () => {
         {isMobileMenuOpen && (
           <div
             ref={mobileMenuRef}
-            className="md:hidden bg-white/95 shadow-lg mt-2 rounded-lg p-5"
+            className="md:hidden bg-white/95 shadow-lg mt-2 overflow-hidden rounded-lg p-5"
           >
             <nav className="flex flex-col space-y-4">
 
@@ -172,7 +172,7 @@ const Nav = () => {
               <div>
                 <button
                   onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
-                  className="flex justify-between items-center w-full text-black font-medium"
+                  className="flex justify-between items-center overflow-hidden w-full text-black font-medium"
                 >
                   Products <ChevronDown size={18} />
                 </button>

@@ -44,7 +44,7 @@ const Service = () => {
     return (
     <>
 
-      <section id="services" className="py-12 mt-20 sm:py-16 md:py-10 px-4 sm:px-6 bg-white scroll-mt-20">
+      <section id="services" className="py-12 mt-20 overflow-hidden sm:py-16 md:py-10 px-4 sm:px-6 bg-white scroll-mt-20">
       <div className="w-11/12 mx-auto">
        <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl animate__animated  animate__backInDown  font-extrabold text-[#291a06] tracking-tight">
@@ -67,7 +67,7 @@ const Service = () => {
         
          
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-items-center sm:gap-8">          {services.map((service, index) => {
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 overflow-hidden gap-6 items-center justify-items-center sm:gap-8">          {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div

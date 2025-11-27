@@ -55,7 +55,7 @@ export default function Specialization() {
   return (
     <>
     {/* <Clients/> */}
-    <section className="w-full min-h-screen bg-[#f3f4f6] py-20 px-6 text-white">
+    <section className="w-full min-h-screen bg-[#f3f4f6] py-20 px-6 text-white overflow-hidden">
       <div className=" container mx-auto max-w-6xl mx-auto text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-wide text-[#0c2b63]">Specialization</h2>
         <p className="text-lg opacity-90 max-w-2xl mx-auto text-[#0c2b63]">
@@ -63,7 +63,7 @@ export default function Specialization() {
         </p>
       </div>
 
-      <div className=" container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div className="overflow-hidden container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {services.map((service, index) => (
           <div
             key={index}

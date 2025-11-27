@@ -65,7 +65,7 @@ const Clients = () => {
   }, []);
 
   return (
-    <div className="py-16 bg-gray-50">
+    <div className="py-16 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-10">
           Our Trusted Clients

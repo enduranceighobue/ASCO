@@ -58,7 +58,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all overflow-hidden duration-300 ${
         isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
       }`}
     >
@@ -122,7 +122,7 @@ const Navbar = () => {
           {/* DESKTOP CALL BUTTON */}
           <Link to="/contact" onClick={closeAllMenus}>
             <button
-              className={`hidden md:flex px-6 py-4 rounded-md items-center gap-2 font-medium transition-colors ${
+              className={`hidden md:flex px-6 py-4 rounded-md overflow-hidden items-center gap-2 font-medium transition-colors ${
                 isScrolled
                   ? "bg-[#0C2B63] text-white hover:bg-[#046a97]"
                   : "bg-white text-black hover:bg-gray-200"
@@ -148,7 +148,7 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div
             ref={mobileMenuRef}
-            className="md:hidden bg-white/95 shadow-lg mt-2 rounded-lg p-5"
+            className="md:hidden bg-white/95 shadow-lg mt-2 overflow-hidden rounded-lg p-5"
           >
             <nav className="flex flex-col space-y-4">
 
@@ -195,7 +195,7 @@ const Navbar = () => {
 
               {/* MOBILE CALL BUTTON */}
               <Link to="/contact" onClick={closeAllMenus}>
-                <button className="bg-[#0281bc] text-white px-6 py-3 rounded-md w-fit">
+                <button className="bg-[#0281bc] text-white overflow-hidden px-6 py-3 rounded-md w-fit">
                   Call Us
                 </button>
               </Link>

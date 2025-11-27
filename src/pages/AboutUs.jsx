@@ -17,7 +17,7 @@ const AboutUs = () => {
   return (
     <>
     
-      <section className="container mx-auto px-4 sm:px-6 lg:px-10 py-20 ">
+      <section className="container mx-auto px-4 overflow-hidden sm:px-6 lg:px-10 py-20 ">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-[#0c2b63] tracking-tight">

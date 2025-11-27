@@ -25,7 +25,7 @@ const Products = () => {
     <>
     <Navbar/>
 
-    <section className="container mx-auto px-4 py-16 mt-10">
+    <section className="container mx-auto px-4 overflow-hidden py-16 mt-10">
       
       {/* Page Title */}
       <div className="text-center mb-12">

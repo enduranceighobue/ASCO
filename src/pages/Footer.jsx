@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0c2b63] h-full py-10 flex  flex-col gap-8">
+    <footer className="bg-[#0c2b63] h-full overflow-hidden py-10 flex  flex-col gap-8">
       <section className="container mx-auto px-4 sm:px-6 lg:px-10 py-20 text-center  justify-center pb-8  lg:flex items-center lg:justify-between">
         <div className="flex justify-center items-center  p-2 rounded-[6px] w-20 mx-auto md:mx-0 md:w-fit mb-6 md:mb-0 ">
           <img className="w-15 h-15 cursor-pointer"  src={navLogo} alt="nav-logo" />
