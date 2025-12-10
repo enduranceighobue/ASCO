@@ -1,14 +1,23 @@
 import React from "react";
-import Navbar from "../pages/Navbar";
 import aboutImg from "../assets/image.png"; // Replace with your own image
+import WhoWeAre from "./WhoWeAre";
+import Mission from "./Mission";
+import { Wheat } from "lucide-react";
+import WhatWeDoSwiper from "./WhatWeDoSwiper";
+import AboutHero from "./AboutHero"
 
 const About = () => {
   return (
     <>
-    <Navbar/>
-    <section className="container mx-auto px-4 py-20 overflow-hidden mt-20">
+      <div className="">
+        <AboutHero/>
+        <WhoWeAre />
+        <Mission />
+        <WhatWeDoSwiper />
+      </div>
+      {/* <section className="container mx-auto px-4 py-20 overflow-hidden mt-20"> */}
       {/* Header */}
-      <div className="text-center mb-14">
+      {/* <div className="text-center mb-14">
         <h2 className="text-4xl lg:text-5xl font-bold animate__animated  animate__backInDown text-[#0c2b63] tracking-tight">
            Ashaka Security Company
         </h2>
@@ -18,25 +27,25 @@ const About = () => {
         <p className="text-gray-600 text-lg mt-3 max-w-2xl mx-auto">
           ...Your Total Security Company!
         </p>
-      </div>
+      </div> */}
 
-      <div className="flex flex-col md:flex-row items-center gap-12">
-        {/* Left Side – Image */}
-        <div className="md:w-1/2">
+      {/* <div className="flex flex-col md:flex-row items-center gap-12"> */}
+      {/* Left Side – Image */}
+      {/* <div className="md:w-1/2">
           <img
             src={aboutImg}
             alt="About ASCO LTD"
             className="rounded-xl shadow-xl object-cover w-full max-h-[450px]"
           />
-        </div>
+        </div> */}
 
-        {/* Right Side – Content */}
-        <div className="md:w-1/2 space-y-6">
+      {/* Right Side – Content */}
+      {/* <div className="md:w-1/2 space-y-6">
           <h3 className="text-3xl font-bold text-[#0c2b63]">
             Who We Are
-          </h3>
+          </h3> */}
 
-          <p className="text-gray-700 leading-relaxed">
+      {/* <p className="text-gray-700 leading-relaxed">
             ASCO LTD is a trusted provider of professional security,
             industrial manpower, and specialized facility services. With years
             of excellence, we are committed to delivering high-quality solutions
@@ -48,9 +57,9 @@ const About = () => {
             accountability, and continuous improvement. We combine trained
             personnel, modern technologies, and industry-standard procedures to
             ensure maximum efficiency and safety.
-          </p>
+          </p> */}
 
-          {/* <h3 className="text-2xl font-bold text-[#0c2b63] mt-6">
+      {/* <h3 className="text-2xl font-bold text-[#0c2b63] mt-6">
             Our Mission
           </h3>
           <p className="text-gray-700 leading-relaxed">
@@ -59,7 +68,7 @@ const About = () => {
             clients.
           </p> */}
 
-          <h3 className="text-2xl font-bold text-[#0c2b63] mt-6">
+      {/* <h3 className="text-2xl font-bold text-[#0c2b63] mt-6">
             Our Vision
           </h3>
           <p className="text-gray-700 leading-relaxed">
@@ -69,8 +78,8 @@ const About = () => {
         </div>
       </div>
     </section>
-     
-      </>
+      */}
+    </>
   );
 };
 

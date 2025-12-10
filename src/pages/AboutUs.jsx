@@ -1,14 +1,17 @@
 import React from "react";
-import { CheckCircle, Shield, Clock, MapPin } from "lucide-react";
-import aboutimg from "../assets/asco.jpeg";
-import Vision from './Vision.jsx';
+import { UserCheck, ShieldCheck, Clock, Zap, ArrowRight } from "lucide-react";
+import aboutimg from "../assets/About.png";
+import CountUpOnView from "../components/CountUpOnView";
+import rectangle from "../assets/Rectangle.png";
+import cctvtwo from "../assets/cctvtwo.png";
+
 
 
 const features = [
-  { icon: Shield, title: "Licensed & Certified", description: "Fully licensed security company" },
-  { icon: CheckCircle, title: "Trained Personnel", description: "Highly skilled security guards" },
+  { icon: ShieldCheck, title: "Licensed & Certified", description: "Fully licensed security company" },
+  { icon: UserCheck, title: "Trained Personnel", description: "Highly skilled security guards" },
   { icon: Clock, title: "24/7 Service", description: "Round-the-clock protection" },
-  { icon: MapPin, title: "Lagos Based", description: "Serving all of Nigeria" },
+  { icon: Zap, title: "Rapid Deployment Teams", description: "Serving all of Nigeria" },
 ];
 
 const customBlue = "#0C2B63";
@@ -16,21 +19,12 @@ const customBlue = "#0C2B63";
 const AboutUs = () => {
   return (
     <>
-    
-      <section className="container mx-auto px-4 overflow-hidden sm:px-6 lg:px-10 py-20 ">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-[#0c2b63] tracking-tight">
-            About Us
-          </h2>
 
-          {/* Divider */}
-          <div className="mt-4 flex justify-center gap-2">
-            <div className="w-20 h-1 bg-gray-300 rounded-full"></div>
-            <div className="w-20 h-1 bg-[#0C2B63] rounded-full"></div>
-            <div className="w-20 h-1 bg-gray-300 rounded-full"></div>
-          </div>
-        </div>
+      <section className="container mx-auto px-4 relative overflow-hidden sm:px-6 lg:px-10 py-20 ">
+        {/* Header */}
+       <div>
+        <img src={cctvtwo} className="absolute bottom-0 right-0 md:block hidden" alt="" />
+       </div>
 
         {/* Main Grid */}
         <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -54,48 +48,63 @@ const AboutUs = () => {
               style={{ backgroundColor: customBlue }}
               className="absolute bottom-[-25px] right-0 px-8 py-6 rounded-tl-3xl rounded-br-3xl text-white shadow-xl"
             >
-              <p className="text-5xl font-extrabold leading-none">58+</p>
+              <p className="text-5xl font-extrabold leading-none">
+                <CountUpOnView end={58} />
+              </p>
               <p className="text-lg font-light">Years of Excellence</p>
             </div>
           </div>
 
           {/* Text Section */}
-          <div className="space-y-8">
-            <p className="text-gray-700 text-lg">
-              <strong className="text-[#0C2B63]">Ashaka Security Company (ASCO) Limited</strong> is a Federal Goverment registered and licensed security company in full compliance with all relevant laws for private security operations in Nigeria, with registration number <strong className="text-[#0C2B63]">92709</strong>
-            
+          <div className="space-y-8 container">
+            <div className="flex gap-2 font-semibold">
+              <img src={rectangle} className="w-2 h-2 mt-2 " alt="" />
+              <p> About ASCO</p>
+            </div>
+            <p className="text-black  font-[400]">
+              For over five decades, Ashaka Security Company (ASCO) Limited has delivered reliable, technology-driven security solutions across Nigeria.
+
             </p>
 
-            <p className="text-gray-700 text-lg">
-             We are more than a regular security company. For us at <strong className="text-[#0C2B63]"> ASCO,</strong>Security Services is professionalism at its core and metric value adding. This is why the Brand and Business has transcended five decades and boast of over 90% customer retention. We have become a viable dependable Security Services partner and a proud part of our client's growth over the years.
+            <p className="text-black ">
+             As a Federal Government–licensed security company, we combine trained personnel, advanced surveillance systems, and a customer-first mindset to protect people, property, and critical infrastructure.
             </p>
 
             {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2  ">
               {features.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex items-start gap-4 p-3 hover:bg-blue-100 cursor-pointer rounded-xl transition-all duration-300"
+                  className="flex items-start gap-2 p-2   hover:bg-blue-100 cursor-pointer rounded-xl transition-all duration-300"
                 >
                   <div
                     style={{ color: customBlue }}
-                    className="p-3 rounded-full border-2 border-current"
+                    className=" rounded-full "
                   >
-                    <feature.icon className="w-6 h-6 font-bold" />
+                    <feature.icon className="w-7 h-7 mb-2 font-[700] text-[#0080bb]" />
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold">{feature.title}</h3>
-                    <p className="text-gray-600 text-sm">
-                      {feature.description}
-                    </p>
+
+                  </div>
+                  <div>
+                    
                   </div>
                 </div>
               ))}
             </div>
+            <button
+          
+                className="bg-[#0080bb] text-white px-6 text-sm py-2 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:bg-blue-100 hover:text-blue-800 hover:shadow-xl transform hover:-translate-y-1"
+              >
+              Learn More About ASCO 
+                <ArrowRight className="h-3 w-3" />
+              </button>
           </div>
         </div>
+        
       </section>
-      <Vision/>
+
     </>
   );
 };

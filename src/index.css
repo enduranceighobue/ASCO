@@ -1,16 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+
 @import "tailwindcss";
 @import 'animate.css';
 
 
-h1, h2, h3 {
-  font-family: "Red Hat Mono", monospace;
+p, h1{
+   font-family: "Montserrat", sans-serif;
 }
 
-p{
-  font-family: "Vend Sans", sans-serif;
-}
+
 
 body{
   overflow-x: hidden;
@@ -20,6 +22,43 @@ body{
 
 
 
+/* .swiper-button-next,
+.swiper-button-prev {
+  width: 55px !important;
+  height: 55px !important;
+  background-color: #0080BB !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  color: white !important;
+
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+
+  top: 50% !important;
+  transform: translateY(-50%);
+} */
+
+/* .swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 22px !important;
+  font-weight: bold;
+} */
+
+/* .swiper-button-prev {
+  left: 0px !important; 
+}
+
+.swiper-button-next {
+  right: 0px !important; 
+} */
+
+.abouts{
+  background-image: url(../src/assets/aboutsbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 
 

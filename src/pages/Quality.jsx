@@ -1,73 +1,80 @@
 import React from "react";
-import qualityImage from "../assets/quality2.jpeg";
+import qualityImage from "../assets/commitimg.png";
+import red from "../assets/red.svg";
+import SecurityAssessmentForm from "./SecurityAssessmentForm";
 
 const qualityCards = [
   {
     title: "ISO 9001:2015 Certified",
-    description: "Our processes comply with international quality standards.",
+    description: "Our processes comply with international quality standards and are regularly audited for effectiveness.",
   },
   {
     title: "Continuous Improvement",
-    description: "Continual Improvements In Process Performance & Service Delivery.",
+    description: "We continually improve our process performance and service delivery based on feedback, audits, and reviews.",
   },
   {
-    title: "Customer Satisfaction",
-    description: "Deliver On Agreed Customer Requirments & Expectations.",
+    title: "Process & Service Excellence",
+    description: "From recruitment to deployment, every step is documented and measured to ensure consistent, reliable security services.",
   },
   {
-    title: "Process Optimization",
-    description: "Eliminate & Prevent Process & Service Non-Conformities.",
+    title: "Safty & Compliance",
+    description: "We prioritise the safety of our clients, personnel, and assets while meeting all regulatory and industry requirements.",
   },
- 
 ];
 
 const Quality = () => {
   return (
-    <section className="container mx-auto px-4 overflow-hidden py-16">
-      <div className="text-center mb-16">
-        <h2 className="text-4xl lg:text-5xl font-bold text-[#0c2b63] tracking-tight">
-          Quality Management System
-        </h2>
-      </div>
+    <>
+      <section className="container mx-auto px-20 py-16 ">
+        <div className="text-center mb-12 ">
+          <h2 className="text-3xl lg:text-x4l font-bold text-black mb-3">
+            Our Commitment To Quality & Safety
+          </h2>
+          <p className="text-[17px]">Professional security solutions tailored to protect people, property, and critical</p>
+          <p>operations.</p>
+        </div>
 
-      <div className="flex flex-col md:flex-row items-start gap-10">
-        
-        {/* LEFT SIDE – STYLISH FLOATING ZIG-ZAG CARDS */}
-        <div className="md:w-2/3 flex flex-col gap-8">
-          {qualityCards.map((card, index) => {
-            const isEven = index % 2 === 0;
-            return (
+        <div className="flex flex-col md:flex-row  gap-10">
+
+          {/* LEFT — UNIFORM STRAIGHT CARDS */}
+          <div className="md:w-1/2 flex flex-col ">
+
+            {qualityCards.map((card, index) => (
+
               <div
                 key={index}
-                className={`bg-white shadow-xl rounded-xl p-6 md:p-8 border-l-4 border-blue-600 transition-transform duration-500 hover:-translate-y-2 hover:shadow-2xl ${
-                  isEven ? "md:ml-0" : "md:ml-10"
-                }`}
-                style={{
-                  transform: `translateY(${index * 5}px)`,
-                }}
+                className="bg-white shadow-lg rounded-lg p-5 flex gap-3   border-l-4 border-blue-600 
+              transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
-                <h3 className="text-2xl font-semibold text-gray-800 mb-2">
-                  {card.title}
-                </h3>
-                <p className="text-gray-600">{card.description}</p>
+                <div className="mt-4">
+                  <img src={red} alt="" className="w-8 " />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-black mb-1">
+                    {card.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{card.description}</p>
+                </div>
+
+
               </div>
-            );
-          })}
-        </div>
+            ))}
+          </div>
 
-        {/* RIGHT SIDE – IMAGE */}
-        <div className="md:w-1/2 flex justify-center overflow-hidden">
-          <img
-            src={qualityImage}
-            alt="Quality Management"
-            className="rounded-xl shadow-2xl w-full max-w-md object-cover hover:scale-105 transition-transform duration-500"
-          />
+          {/* RIGHT — IMAGE */}
+          <div className="w-i/2 flex justify-center">
+            <img
+              src={qualityImage}
+              alt="Quality Management"
+              className="rounded-xl shadow-xl w-[500px] h-[430px] object-cover 
+            hover:scale-105 transition-transform duration-500"
+            />
+          </div>
         </div>
-
-      </div>
-    </section>
+      </section>
+      <SecurityAssessmentForm />
+    </>
   );
 };
 
 export default Quality;
-
