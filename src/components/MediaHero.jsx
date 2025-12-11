@@ -1,13 +1,15 @@
 import React from "react";
 import Security from "../assets/securityfile.png"; // use transparent PNG / properly cropped guard
 import Mediabg from "../assets/mediabg.png";
+import { div } from "framer-motion/client";
 
 
 
 
 export default function MediaHero() {
   return (
-    <section className="relative w-full md:h-[600px] overflow-hidden bg-[#1D2140]">
+    <div className="  bg-[#1D2140] ">
+    <section className="relative w-full md:h-[600px] overflow-hidden mx-auto container ">
       {/* BACKGROUND IMAGE + OVERLAY */}
       <div
         className="absolute   h-full  " 
@@ -38,5 +40,6 @@ export default function MediaHero() {
       {/* small spacer so section doesn't overlap next content too much */}
       {/* <div className="relative z-0 h-[160px] bg-black" /> */}
     </section>
+    </div>
   );
 }

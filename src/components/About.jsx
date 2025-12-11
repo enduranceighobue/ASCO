@@ -4,15 +4,13 @@ import WhoWeAre from "./WhoWeAre";
 import Mission from "./Mission";
 import { Wheat } from "lucide-react";
 import WhatWeDoSwiper from "./WhatWeDoSwiper";
-// import HeroSection from "./HeroSection";
 import AboutHero from "./AboutHero";
 
 const About = () => {
   return (
     <>
-      <div className="">
-        {/* <HeroSection/> */}
-        <AboutHero/>
+      <AboutHero />
+      <div className="abouts">
         <WhoWeAre />
         <Mission />
         <WhatWeDoSwiper />

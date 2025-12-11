@@ -8,8 +8,8 @@ import "swiper/css/effect-coverflow";
 
 export default function Infinite3DCarousel() {
   const slides = [
-    "/src/assets/about3.jpg",
-    "/src/assets/about2.jpg",
+    "/src/assets/about3.png",
+    "/src/assets/about2.png",
     "/src/assets/about1.png",
   ];
 
