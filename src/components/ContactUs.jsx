@@ -53,8 +53,8 @@ const ContactUs = () => {
 
             {/* Circle Decorations */}
             <div className="absolute bottom-0 right-0 flex md:block hidden">
-              <div className="w-40 h-40 bg-[#6bb6d9] opacity-50  rounded-full translate-x-28 "></div>
-              <div className="w-48 h-48 bg-[#0f1536] opacity-80 rounded-full "></div>
+              <div className="w-40 h-40 bg-[#6bb6d9] opacity-50  rounded-full -translate-x-3 translate-y-40 "></div>
+              <div className="w-48 h-48 bg-[#0f1536] opacity-80 rounded-full translate-x-10 translate-y-10 "></div>
             </div>
           </div>
 

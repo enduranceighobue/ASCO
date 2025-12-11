@@ -46,14 +46,14 @@ const WhatWeDoCard = ({ image, title, desc }) => {
   return (
     <div
      
-      className="border-2 border-gray-300 py-4 px-4 rounded-lg  text-center space-y-2 w-[320px] lg:w-[350px]"
+      className="border-2 border-gray-300 py-4 px-4 bg-[#f1f5f9]  rounded-lg  text-center space-y-2 w-[320px] lg:w-[350px]"
       style={{  height: '250px'}}
     >
       <div className="w-20 h-20 lg:w-28 lg:h-28  mx-auto">
       <img
         src={image}
         alt={`${title}'s photo`}
-        className="h-full w-full rounded-full"
+        className="h-full w-full rounded-full  "
       />
       </div>
       <h5 className="text-xl lg:text-2xl font-semibold  text-[#0080BB]">{title}</h5>
