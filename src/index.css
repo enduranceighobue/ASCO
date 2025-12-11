@@ -18,7 +18,12 @@ body{
   overflow-x: hidden;
 }
 
-
+.about{
+  background-image: url(../src/assets/aboutbg.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #1D2140 !important;
+}
 
 
 
@@ -53,12 +58,7 @@ body{
   right: 0px !important; 
 } */
 
-.abouts{
-  background-image: url(../src/assets/aboutsbg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
+
 
 
 

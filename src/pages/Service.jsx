@@ -15,37 +15,37 @@ import {
 const services = [
   {
     icon: HardHat,
-    title: "Finacial Security",
+    title: "",
     description:
-      "Specialized security services for banks and financial institutions.",
+      "Provison of trained security guards, security dogs & dog handlers.",
   },
   {
     icon: Factory,
-    title: "Industrial Security",
+    title: "",
     description:
-      "Specialized protection for factories, warehouses, and industrial operations.",
+      "Provision of security for large events and gatherings.",
   },
   {
     icon: Calendar,
-    title: "Event Security",
-    description: "Expert Security management for your events.",
+    title: "",
+    description: "Our emergency response unit delivers swift, coordinated action",
   },
   {
     icon: Shield,
-    title: "Corporate Security",
+    title: "",
     description:
-      "Comprehensive security solutions to protect corporate environments and assets.",
+      "Security awareness training for clients.",
   },
   {
     icon: Hospital,
-    title: "Healthcare Security",
-    description: "Dedicated security solutions for medical facilities.",
+    title: "",
+    description: "Supply and maintenance of electronic security.",
   },
 
   {
     icon: ShieldCheck,
-    title: "Residential Security",
-    description: "Professional guard services for residential communities.",
+    title: "",
+    description: "Executive protection and armed escorts..",
   },
 ];
 

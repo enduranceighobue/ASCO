@@ -9,36 +9,35 @@ import Icon3 from "../assets/lsicon_user-crowd.svg";
 
 const whatwedo = [
   {
-    image: Icon1,
-    title: 'Manned Gaurding & Patrol',
-    desc: 'Trained officers ensuring continuous onsite protetion',
-  },
-  {
-    image: Icon2,
-    title: 'Industrial Security',
-    desc: "Security solutions for factories & industrial sites.",
-  },
-  {
-    image: Icon3,
-    title: 'Crowd Control',
-    desc: 'Well- coordinated personnel for events & gatherings',
-  },
-  {
-    image: Icon1,
-    title: 'Manned Gaurding & Patrol',
-    desc: 'Trained officers ensuring continuous onsite protetion',
-  },
-  {
-    image: Icon2,
-    title: 'Industrial Security',
-    desc: "Security solutions for factories & industrial sites.",
-  },
-  {
-    image: Icon3,
-    title: 'Crowd Control',
-    desc: 'Well- coordinated personnel for events & gatherings',
-  }
-
+     image: Icon1,
+     title: 'Trained Security Guards',
+     desc: 'Provision of trained security guards, security dogs & dog handlers.',
+   },
+   {
+     image: Icon2,
+     title: 'Security For Events',
+     desc: "Provision of Security for large events and gatherings.",
+   },
+   {
+     image: Icon3,
+     title: 'Armed Escorts',
+     desc: 'Swift, coordinated emergency response services.',
+   },
+   {
+     image: Icon1,
+     title: 'Trained Security Guards',
+     desc: 'Provision of trained security guards, security dogs & dog handlers.',
+   },
+   {
+     image: Icon2,
+     title: 'Security For Events',
+     desc: "Provision of Security for large events and gatherings.",
+   },
+   {
+     image: Icon3,
+     title: 'Armed Escorts',
+     desc: 'Swift, coordinated emergency response services.',
+   }
 ];
 
 
