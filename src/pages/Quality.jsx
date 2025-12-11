@@ -27,7 +27,7 @@ const Quality = () => {
     <>
       <section className="container mx-auto px-20 py-16 ">
         <div className="text-center mb-12 ">
-          <h2 className="text-3xl lg:text-x4l font-bold text-black mb-3">
+          <h2 className="md:text-3xl lg:text-x4l font-bold text-black mb-3">
             Our Commitment To Quality & Safety
           </h2>
           <p className="text-[17px]">Professional security solutions tailored to protect people, property, and critical</p>

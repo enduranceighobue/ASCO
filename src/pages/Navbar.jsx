@@ -47,9 +47,9 @@ const Navbar = () => {
           </nav>
 
           {/* Desktop Contact Button */}
-          <Link to="/contact" onClick={closeMobileMenu}>
+          <Link to="/contactus" onClick={closeMobileMenu}>
             <button
-              className={`hidden md:flex px-3 py-1 rounded-full transition ${
+              className={`hidden md:flex px-3 cursor-pointer py-1 rounded-full transition ${
                 isScrolled
                   ? "bg-[#0080bb] text-white hover:bg-blue-500"
                   : "bg-[#0080bb] text-white hover:bg-blue-500"
@@ -80,8 +80,8 @@ const Navbar = () => {
               <Link to="/media" onClick={closeMobileMenu} className="text-black">Media</Link>
               <Link to="/escort" onClick={closeMobileMenu} className="text-black">Escort Enquiries</Link>
 
-              <Link to="/contact" onClick={closeMobileMenu}>
-                <button className="bg-[#0281bc] text-white px-6 py-3 rounded-md w-fit">
+              <Link to="/contactus" onClick={closeMobileMenu}>
+                <button className="bg-[#0281bc] cursor-pointer text-white px-6 py-3 rounded-md w-fit">
                   Contact Us
                 </button>
               </Link>

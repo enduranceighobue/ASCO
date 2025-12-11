@@ -1,6 +1,7 @@
 import React from 'react'
 import ourspreadimg from "../assets/spreadimgone.png";
 import ourspreadimgtwo from "../assets/spreadimgtwo.png";
+import AboutHero from './AboutHero';
 
 
 
@@ -9,6 +10,8 @@ const OurSpread = () => {
 
   return (
     <>
+   <AboutHero/>
+    
       <div className="w-full  flex flex-col items-center bg-[#F1F5F9] p-4">
         {/* Container for images */}
         <div className="w-full max-w-4xl flex flex-col gap-6">

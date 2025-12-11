@@ -1,4 +1,7 @@
 import React from "react";
+import AboutHero from "../components/AboutHero";
+
+
 import {
   HardHat,
   ShieldCheck,
@@ -50,7 +53,7 @@ const Service = () => {
   return (
     <>
       
-
+        <AboutHero/>
       <section
         id="services"
         className="py-12 mt-20 overflow-hidden mx-auto container sm:py-16 md:py-10 px-4 sm:px-6 bg-white scroll-mt-20"

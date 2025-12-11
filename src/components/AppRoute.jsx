@@ -11,6 +11,11 @@ const Home = lazy(() => import("../pages/Home"));
 const About = lazy(() => import("../components/About"));
 const Service = lazy(() => import("../pages/Service"));
 const OurSpread = lazy(() => import("../components/OurSpread"));
+const Media = lazy(() => import("../components/Media"));
+const Escort = lazy(() => import("../components/Escort"));
+const ContactUs = lazy(() => import("../components/ContactUs"));
+
+
 
 export default function AppRoutes() {
   const routes = [
@@ -59,17 +64,35 @@ export default function AppRoutes() {
           ),
         },
 
-      //  {
-      //     path: "about",
+       {
+          path: "media",
 
-      //     element: (
-      //       <Suspense fallback={<Logo />}>
-      //         <About />
-      //       </Suspense>
-      //     ),
-      //   },
+          element: (
+            <Suspense>
+              <Media />
+            </Suspense>
+          ),
+        },
+        
+         {
+          path: "escort",
 
+          element: (
+            <Suspense>
+              <Escort />
+            </Suspense>
+          ),
+        },
+       
+         {
+          path: "contactus",
 
+          element: (
+            <Suspense>
+              <ContactUs />
+            </Suspense>
+          ),
+        },
       ],
     },
   ];

@@ -105,7 +105,7 @@ const WhatWeDoSwipe = () => {
   <div className='container w-[90%] mx-auto py-16 space-y-6'>
 
   
-   <h1 className='text-4xl font-bold text-center '>Trusted by Leading Brands Across Nigeria</h1>
+   <h1 className='md:text-4xl font-bold text-center '>Trusted by Leading Brands Across Nigeria</h1>
       <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
         For over five decades, ASCO has supported top organizations with reliable security services and certified operational standards.
       </p>

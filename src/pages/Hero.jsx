@@ -20,7 +20,7 @@ export default function Hero() {
 
       {/* HERO CONTENT */}
       <div className="relative z-30 max-w-6xl mx-auto px-6 text-center pt-16 md:pt-24 pb-6">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl animate__animated animate__fadeInDown font-semibold mt-4 text-white">
+        <h1 className="text-xl md:text-5xl lg:text-6xl animate__animated animate__fadeInDown font-semibold mt-4 text-white">
           Security Built on Trust. <br />
           Protection Backed by Expertise.
         </h1>
