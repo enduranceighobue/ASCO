@@ -4,7 +4,7 @@ import aboutbg from "../assets/aboutbg.svg";
 
 export default function ServiceHero() {
   return (
-    <section className="relative w-full md:h-[300px] overflow-hidden bg-[#1D2140]">
+    <section className="relative w-full md:h-[270px] overflow-hidden bg-[#1D2140]">
       {/* BACKGROUND IMAGE + OVERLAY */}
       <div className="absolute   h-full  " />
       <img
@@ -16,7 +16,7 @@ export default function ServiceHero() {
 
       {/* HERO CONTENT */}
       <div className="relative z-30 max-w-6xl mx-auto px-6 text-center pt-16 md:pt-24 pb-6">
-        <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+        <h1 className="md:text-4xl font-bold text-white mb-4">
           Our Spread
         </h1>
         <p className="text-white  md:text-xl max-w-3xl mx-auto opacity-60">

@@ -3,7 +3,7 @@ import aboutbg from "../assets/aboutbg.svg";
 
 export default function EscortHero() {
     return (
-        <section className="relative w-full md:h-[300px] overflow-hidden bg-[#1D2140]">
+        <section className="relative w-full md:h-[270px] overflow-hidden bg-[#1D2140]">
             {/* BACKGROUND IMAGE + OVERLAY */}
             <div className="absolute   h-full  " />
             <img

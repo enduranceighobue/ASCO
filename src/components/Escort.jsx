@@ -12,7 +12,7 @@ const Escort = () => {
           <div className="w-full mx-auto container flex flex-col gap-6 ">
             {/* Top Image */}
 
-            <div className="container w-[90%] mx-auto py-16 space-y-4">
+            <div className="container w-[90%] mx-auto py-10 space-y-3">
               <h1 className="md:text-4xl font-bold text-center ">
                 Training & Operations Room.
               </h1>
@@ -20,11 +20,11 @@ const Escort = () => {
                 Our officers undergo continuous training.
               </p>
             </div>
-            <div className="w-full ">
+            <div className="w-full  ">
               <img
                 src={escort}
                 alt="Top"
-                className="w-full h-auto object-cover rounded-lg"
+                className="w-full h-auto object-cover rounded-lg "
               />
             </div>
           </div>

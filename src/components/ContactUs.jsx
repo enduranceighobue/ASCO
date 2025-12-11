@@ -1,12 +1,12 @@
 import React from "react";
 import googlemap from "../assets/google.png";
-import AboutHero from './AboutHero';
+import ContactHero from "./ContactHero";
 
 const ContactUs = () => {
   return (
     <>
-    <AboutHero/>
-    
+      <ContactHero />
+
       <div className="min-h-screen w-full bg-white flex justify-center items-center py-16 px-6">
         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* LEFT CARD */}
