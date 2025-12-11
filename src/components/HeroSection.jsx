@@ -1,4 +1,4 @@
-import Infinite3DCarousel from './Swiper'
+import Infinite3DCarousel from '../components/Infinite3DCarousel'
 
 const HeroSection = () => {
   return (

@@ -67,7 +67,7 @@ const WhoWeAre = () => {
   };
   return (
     <div className=" py-16 bg-[#f1f5f9]">
-        <div className='w-11/12 lg:w-9/12 mx-auto mt-12 flex flex-col justify-center items-center gap-12 '>
+        <div className='w-11/12 lg:w-9/12 mx-auto flex flex-col justify-center items-center gap-12 '>
      <div className="space-y-12">
         <h1 className='text-center text-5xl font-bold'>Who We Are</h1>
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-40 text-[#1D2140] text-xl">

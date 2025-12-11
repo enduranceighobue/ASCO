@@ -1,11 +1,10 @@
 import React from "react";
 import escort from "../assets/escort.png";
-import AboutHero from './AboutHero';
-
+import EscortHero from "./EscortHero";
 const Escort = () => {
   return (
     <>
-     <AboutHero/>
+     <EscortHero/>
     
       <section>
         <div className="w-full  flex flex-col items-center bg-[#ffffff] p-4 ">

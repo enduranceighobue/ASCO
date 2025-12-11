@@ -19,7 +19,7 @@ body{
 }
 
 .about{
-  background-image: url(../src/assets/aboutbg.png);
+  background-image: url(../src/assets/aboutbg.svg);
   background-repeat: no-repeat;
   background-position: right;
   background-color: #1D2140 !important;

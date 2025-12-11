@@ -26,6 +26,7 @@ import trainingfour from "../assets/trainingfour.png";
 import trainingfive from "../assets/trainingfive.png";
 import { img } from "framer-motion/m";
 import { useState } from "react";
+import MediaHero from "./MediaHero";
 
 const Media = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -65,9 +66,9 @@ const Media = () => {
 
   return (
     <>
-      <AboutHero />
+      <MediaHero />
 
-      <section className="mt-20">
+      <section className="">
         <div className="w-full  flex flex-col items-center bg-[#ffffff] p-4 ">
           {/* Container for images */}
           <div className="w-full max-w-4xl flex flex-col gap-6 ">

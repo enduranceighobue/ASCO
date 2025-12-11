@@ -1,7 +1,7 @@
 import React from 'react'
 import ourspreadimg from "../assets/spreadimgone.png";
 import ourspreadimgtwo from "../assets/spreadimgtwo.png";
-import AboutHero from './AboutHero';
+import SpreadHero from './SpreadHero';
 
 
 
@@ -10,7 +10,7 @@ const OurSpread = () => {
 
   return (
     <>
-   <AboutHero/>
+   <SpreadHero/>
     
       <div className="w-full  flex flex-col items-center bg-[#F1F5F9] p-4">
         {/* Container for images */}
