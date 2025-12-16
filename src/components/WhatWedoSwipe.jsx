@@ -111,8 +111,8 @@ const WhatWeDoSwipe = () => {
           </Swiper>
 
 
-          <img src={arrowleft} alt="" className='absolute top-25 left-[-62px]' />
-          <img src={arrowright} alt="" className='absolute top-25 right-[-60px]' />
+          <img src={arrowleft} alt="" className='absolute top-25 left-[-62px] md:block hidden' />
+          <img src={arrowright} alt="" className='absolute top-25 right-[-60px] md:block hidden' />
 
         </div>
 
