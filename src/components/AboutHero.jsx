@@ -6,14 +6,14 @@ export default function AboutHero() {
   return (
     <div className="  bg-[#1D2140] ">
 
-      <section className="relative mx-auto container w-full md:h-[650px] overflow-hidden">
+      <section className="relative mx-auto container w-full md:h-[300px] overflow-hidden">
         {/* BACKGROUND IMAGE + OVERLAY */}
         <div className="absolute   h-full  " />
-        {/* <img
-          src={aboutbg}
-          alt=""
-          className="absolute -right-10 top-65   object-cover  w-120 h-100"
-        /> */}
+        <img
+                src={aboutbg}
+                alt=""
+                className="absolute -right-10   object-cover w-100 h-100 "
+              />
         <div />
 
         {/* HERO CONTENT */}
@@ -33,11 +33,7 @@ export default function AboutHero() {
         <div className=" mx-auto container">
 
 
-          <img
-            src={aboutherobg}
-            alt=""
-            className="absolute   object-cover right-10  top-47  "
-          />
+          
         </div>
       </section>
     </div>

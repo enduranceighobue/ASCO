@@ -119,7 +119,7 @@ const WhatWeDoSwipe = () => {
             reliable security services and certified operational standards.
           </p>
 
-          <div className="flex flex-wrap gap-3 justify-center container mx-auto py-6">
+          <div className="flex flex-wrap gap-3 justify-center container mx-auto  py-6">
             {brands.map((brand) => (
               <span
                 key={brand}
@@ -127,7 +127,7 @@ const WhatWeDoSwipe = () => {
                     bg-[#f1f5f9] 
                     text-[#0080bb] 
                        font-medium 
-                        px-4 py-2 
+                        px-7 mx-4 py-3 
                         rounded-full 
                         shadow-md 
                         hover:bg-[#e0f2fe] 
