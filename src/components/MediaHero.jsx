@@ -2,6 +2,8 @@ import React from "react";
 import Security from "../assets/securityfile.png"; // use transparent PNG / properly cropped guard
 import Mediabg from "../assets/mediabg.png";
 import { div } from "framer-motion/client";
+import aboutbg from "../assets/aboutbg.svg";
+
 
 
 
@@ -9,15 +11,15 @@ import { div } from "framer-motion/client";
 export default function MediaHero() {
   return (
     <div className="  bg-[#1D2140] ">
-    <section className="relative w-full md:h-[600px] overflow-hidden mx-auto container ">
+    <section className="relative w-full md:h-[300px] overflow-hidden mx-auto container ">
       {/* BACKGROUND IMAGE + OVERLAY */}
-      <div
-        className="absolute   h-full  " 
-      />
-      <img src={Mediabg} alt=""className="absolute top-70  object-cover "/>
-      
-
-      <div/>
+      <div className="absolute   h-full  " />
+            <img
+              src={aboutbg}
+              alt=""
+              className="absolute -right-10   object-cover w-100 h-100 "
+            />
+            <div />
 
       {/* HERO CONTENT */}
       <div className="relative z-30 max-w-6xl mx-auto px-6 text-center pt-16 md:pt-24 pb-6">

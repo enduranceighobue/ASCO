@@ -2,6 +2,8 @@ import React from "react";
 import mediaone from "../assets/mediaone.png";
 import mediathree from "../assets/mediathree.png";
 import AboutHero from "./AboutHero";
+import garrett from "../assets/garrett.png";
+
 import awardone from "../assets/awardone.png";
 import awardtwo from "../assets/awardtwo.png";
 import awardthree from "../assets/awardthree.png";
@@ -19,11 +21,11 @@ import electronfive from "../assets/electronicfive.png";
 import electronsix from "../assets/electronicsix.png";
 import electronseven from "../assets/electronicseven.png";
 import electroneight from "../assets/electroniceight.png";
-import trainingone from "../assets/trainingone.png";
-import trainingtwo from "../assets/trainingtwo.png";
-import trainingthree from "../assets/trainingthree.png";
-import trainingfour from "../assets/trainingfour.png";
-import trainingfive from "../assets/trainingfive.png";
+import trainingone from "../assets/trainingoneone.jpeg";
+import trainingtwo from "../assets/trainingtwo.jpeg";
+import trainingthree from "../assets/trainingthree.jpeg";
+import trainingfour from "../assets/trainingone.jpeg";
+import trainingfive from "../assets/trainingfive.jpeg";
 import { img } from "framer-motion/m";
 import { useState } from "react";
 import MediaHero from "./MediaHero";
@@ -46,14 +48,11 @@ const Media = () => {
   ];
 
   const electronics = [
-    { id: 1, title: "CCTV", image: electronone },
-    { id: 2, title: "Fire Alarm System", image: electrontwo },
-    { id: 3, title: "Metal Detector", image: electronthree },
-    { id: 4, title: "Biometric Access", image: electronfour },
-    { id: 5, title: "Card Access Control", image: electronfive },
-    { id: 6, title: "Radio Communication", image: electronsix },
-    { id: 7, title: "Real Time Patrol Device", image: electronseven },
-    { id: 8, title: "Turnstiles", image: electroneight },
+    { id: 1, title: "Biometric Access", image: electronfour },
+    { id: 2, title: "Metal Detector", image: garrett },
+    { id: 3, title: "Fire Alarm System", image: electrontwo },
+    { id: 4, title: "Card Access Control", image: "https://images.unsplash.com/photo-1697382608786-bcf4c113b86e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YmlvbWV0cmljJTIwYWNjZXNzJTIwY29udHJvbHxlbnwwfHwwfHx8MA%3D%3D" },
+
   ];
 
   const trainings = [
@@ -97,7 +96,7 @@ const Media = () => {
                   onClick={() => setSelectedImageThree(training.image)}
                 >
                   {/* REMOVE bg-white and REMOVE extra margin */}
-                  <div className="w-full h-85 rounded-xl overflow-hidden">
+                  <div className="w-full h-94 rounded-xl overflow-hidden">
                     <img
                       src={training.image}
                       alt=""
@@ -130,7 +129,7 @@ const Media = () => {
           <div>
             <div className="container w-[90%] mx-auto py-16 space-y-6 ">
               <h1 className="md:text-3xl font-bold text-center mb-3 ">
-                AWARDS, CERTIFICATES, TROPHIES.
+                AWARDS & CERTIFICATES.
               </h1>
               <p className="text-center text-gray-600 max-w-2xl mx-auto">
                 Awards that reflect our pursuit of quality.

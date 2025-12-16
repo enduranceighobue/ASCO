@@ -4,8 +4,8 @@ import EscortHero from "./EscortHero";
 const Escort = () => {
   return (
     <>
-     <EscortHero/>
-    
+      <EscortHero />
+
       <section>
         <div className="w-full  flex flex-col items-center bg-[#ffffff] p-4 ">
           {/* Container for images */}

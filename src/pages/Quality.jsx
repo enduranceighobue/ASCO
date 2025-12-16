@@ -1,5 +1,5 @@
 import React from "react";
-import qualityImage from "../assets/commitimg.png";
+import qualityImage from "../assets/ascoone.jpeg";
 import red from "../assets/red.svg";
 import SecurityAssessmentForm from "./SecurityAssessmentForm";
 

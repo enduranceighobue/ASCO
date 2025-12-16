@@ -5,11 +5,9 @@ import Logo from "./Logo";
 import ScrollToTop from "./ScrollToTop.jsx";
 
 
-// import ErrorBoundary from "../components/ErrorBoundary";
-// import AboutPage from "./AboutPage";
+
 const RootLayout = lazy(() => import("./RootLayout"));
 const Home = lazy(() => import("../pages/Home"));
-// const Contact = lazy(() => import("@/pages/contact/Contact"));
 const About = lazy(() => import("../components/About"));
 const Service = lazy(() => import("../pages/Service"));
 const OurSpread = lazy(() => import("../components/OurSpread"));
@@ -22,13 +20,13 @@ const ContactUs = lazy(() => import("../components/ContactUs"));
 export default function AppRoutes() {
   const routes = [
     {
-      
+
       element: (
         <Suspense fallback={<Logo />}>
           <RootLayout />
         </Suspense>
       ),
-    //   errorElement: <ErrorBoundary />,
+
       children: [
         {
           index: true,
@@ -57,7 +55,7 @@ export default function AppRoutes() {
           ),
         },
 
-         {
+        {
           path: "spread",
 
           element: (
@@ -67,7 +65,7 @@ export default function AppRoutes() {
           ),
         },
 
-       {
+        {
           path: "media",
 
           element: (
@@ -76,8 +74,8 @@ export default function AppRoutes() {
             </Suspense>
           ),
         },
-        
-         {
+
+        {
           path: "escort",
 
           element: (
@@ -86,8 +84,8 @@ export default function AppRoutes() {
             </Suspense>
           ),
         },
-       
-         {
+
+        {
           path: "contactus",
 
           element: (
