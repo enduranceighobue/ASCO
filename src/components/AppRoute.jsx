@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import { lazy, Suspense } from "react";
 import Logo from "./Logo";
+import ScrollToTop from "./ScrollToTop.jsx";
+
 
 // import ErrorBoundary from "../components/ErrorBoundary";
 // import AboutPage from "./AboutPage";
@@ -20,6 +22,7 @@ const ContactUs = lazy(() => import("../components/ContactUs"));
 export default function AppRoutes() {
   const routes = [
     {
+      
       element: (
         <Suspense fallback={<Logo />}>
           <RootLayout />

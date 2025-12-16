@@ -19,6 +19,7 @@ import AppRoutes from "./components/AppRoute.jsx";
 
 function App() {
   return (
+    
     <AppRoutes/>
     // <BrowserRouter>
     //   <ScrollToTop />
