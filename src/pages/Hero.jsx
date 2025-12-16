@@ -62,9 +62,9 @@ export default function Hero() {
       />
 
       {/* CCTV ICON */}
-      <div className="absolute bottom-7 left-6 z-50 md:block hidden ">
+      {/* <div className="absolute bottom-7 left-6 z-50 md:block hidden ">
         <img src={Cctv} alt="cctv" className="" />
-      </div>
+      </div> */}
 
       {/* small spacer so section doesn't overlap next content too much */}
       {/* <div className="relative z-0 h-[160px] bg-black" /> */}

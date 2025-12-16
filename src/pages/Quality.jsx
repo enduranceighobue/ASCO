@@ -25,7 +25,7 @@ const qualityCards = [
 const Quality = () => {
   return (
     <>
-      <section className="container mx-auto px-20 py-16 ">
+      <section className="container mx-auto px-20 ">
         <div className="text-center mb-12 ">
           <h2 className="md:text-3xl lg:text-x4l font-bold text-black mb-3">
             Our Commitment To Quality & Safety
@@ -37,7 +37,7 @@ const Quality = () => {
         <div className="flex flex-col md:flex-row  gap-10">
 
           {/* LEFT — UNIFORM STRAIGHT CARDS */}
-          <div className="md:w-1/2 flex flex-col ">
+          <div className="md:w-1/2 flex flex-col gap-4 ">
 
             {qualityCards.map((card, index) => (
 
@@ -62,11 +62,11 @@ const Quality = () => {
           </div>
 
           {/* RIGHT — IMAGE */}
-          <div className="w-i/2 flex justify-center">
+          <div className="w-1/2 flex justify-center">
             <img
               src={qualityImage}
               alt="Quality Management"
-              className="rounded-xl shadow-xl w-[500px] h-[430px] object-cover 
+              className="rounded-xl shadow-xl w-[500px] h-[480px] object-cover 
             hover:scale-105 transition-transform duration-500"
             />
           </div>

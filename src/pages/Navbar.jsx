@@ -1,7 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/ascoicon.svg";
+
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "About Us", path: "/about" },
+  { name: "Services", path: "/service" },
+  { name: "Our Spread", path: "/spread" },
+  { name: "Media", path: "/media" },
+  { name: "Escort Enquiries", path: "/escort" },
+];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,51 +24,59 @@ const Navbar = () => {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-  const linkStyle = isScrolled
+  const baseLink =
+    "transition-colors duration-300 cursor-pointer";
+
+  const desktopLink = isScrolled
     ? "text-black hover:text-[#0281bc]"
-    : "text-white hover:text-[#0080bb]";
+    : "text-white hover:text-[#0281bc]";
+
+  const activeLink =
+    "text-[#0281bc] font-semibold ";
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/95 backdrop-blur-md shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20 relative">
 
           {/* Logo */}
-          <Link to="/" onClick={closeMobileMenu}>
-            <div className="flex gap-2 items-center font-semibold">
-              <img src={logo} alt="Logo" className="w-7 h-7 rounded-full" />
-              <h3 className={isScrolled ? "text-black" : "text-white"}>ASCO</h3>
-            </div>
+          <Link to="/" onClick={closeMobileMenu} className="flex items-center gap-2">
+            <img src={logo} alt="Logo" className="w-7 h-7 rounded-full" />
+            <h3 className={isScrolled ? "text-black" : "text-white"}>ASCO</h3>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center space-x-7 hover:text-[#0080bb] cursor-pointer  absolute left-1/2 -translate-x-1/2">
-            <Link to="/" className={linkStyle}>Home</Link>
-            <Link to="/about" className={linkStyle}>About Us</Link>
-            <Link to="/service" className={linkStyle}>Services</Link>
-            <Link to="/spread" className={linkStyle}>Our Spread</Link>
-            <Link to="/media" className={linkStyle}>Media</Link>
-            <Link to="/escort" className={linkStyle}>Escort Enquiries</Link>
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-7 absolute left-1/2 -translate-x-1/2">
+            {navItems.map(({ name, path }) => (
+              <NavLink
+                key={path}
+                to={path}
+                end={path === "/"}
+                className={({ isActive }) =>
+                  `${baseLink} ${isActive
+                    ? "text-[#0281bc] font-semibold"
+                    : desktopLink
+                  }`
+                }
+              >
+                {name}
+              </NavLink>
+            ))}
           </nav>
 
-          {/* Desktop Contact Button */}
+          {/* Contact Button */}
           <Link to="/contactus" onClick={closeMobileMenu}>
-            <button
-              className={`hidden md:flex px-3 cursor-pointer py-1 rounded-full transition ${
-                isScrolled
-                  ? "bg-[#0080bb] text-white hover:bg-blue-500"
-                  : "bg-[#0080bb] text-white hover:bg-blue-500"
-              }`}
-            >
+            <button className="hidden md:flex px-4 py-1 rounded-full bg-[#0080bb] text-white hover:bg-blue-500 transition">
               Contact Us
             </button>
           </Link>
 
-          {/* Mobile Menu Toggle */}
+          {/* Mobile Menu Button */}
           <button
             className={`md:hidden ${isScrolled ? "text-black" : "text-white"}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -72,20 +89,26 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-white/95 shadow-lg mt-2 rounded-lg p-5">
             <nav className="flex flex-col space-y-4">
-
-              <Link to="/" onClick={closeMobileMenu} className="text-black">Home</Link>
-              <Link to="/about" onClick={closeMobileMenu} className="text-black">About Us</Link>
-              <Link to="/service" onClick={closeMobileMenu} className="text-black">Services</Link>
-              <Link to="/spread" onClick={closeMobileMenu} className="text-black">Our Spread</Link>
-              <Link to="/media" onClick={closeMobileMenu} className="text-black">Media</Link>
-              <Link to="/escort" onClick={closeMobileMenu} className="text-black">Escort Enquiries</Link>
+              {navItems.map(({ name, path }) => (
+                <NavLink
+                  key={path}
+                  to={path}
+                  end={path === "/"}
+                  onClick={closeMobileMenu}
+                  className={({ isActive }) =>
+                    `text-black transition ${isActive ? "text-[#0281bc] font-semibold" : ""
+                    }`
+                  }
+                >
+                  {name}
+                </NavLink>
+              ))}
 
               <Link to="/contactus" onClick={closeMobileMenu}>
-                <button className="bg-[#0281bc] cursor-pointer text-white px-6 py-3 rounded-md w-fit">
+                <button className="bg-[#0281bc] text-white px-6 py-3 rounded-md w-fit">
                   Contact Us
                 </button>
               </Link>
-
             </nav>
           </div>
         )}
