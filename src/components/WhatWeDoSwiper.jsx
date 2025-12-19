@@ -67,7 +67,7 @@ const WhatWeDoCard = ({ image, title, desc }) => {
 
 const WhatWeDoSwiper = () => {
   return (
-    <div className="container w-full mx-auto py-16 px-25 space-y-12">
+    <div className="container w-full mx-auto py-16 px-25 space-y-12 md:block hidden">
       <h1 className='text-5xl font-bold text-center'>What We Do</h1>
       <div className='relative '>
         <Swiper

@@ -57,8 +57,8 @@ const Service = () => {
         id="services"
         className="py-12 mt-20 overflow-hidden mx-auto container sm:py-16 md:py-10 px-4 sm:px-6 bg-white scroll-mt-20"
       >
-        <div className="w-11/12 mx-auto">
-          <div className="flex flex-col lg:flex-row gap-10 lg:gap-40 mx-27 mt-10  max-w-4xl text-[#1D2140] text-xl">
+        <div className="w-11/12 mx-auto md:block hidden">
+          <div className="flex flex-col lg:flex-row gap-10 lg:gap-40 mx-27 md:mt-10  max-w-4xl text-[#1D2140] text-xl">
             <h1 className="w-full lg:w-1/2 text-[36px] font-semibold   ">
               Security solutions built around your needs.
             </h1>
@@ -69,7 +69,7 @@ const Service = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 mt-10 max-w-4xl overflow-hidden mx-27 items-center justify-items-center sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:block hidden lg:grid-cols-3 mt-10 md:max-w-4xl overflow-hidden mx-27 items-center justify-items-center sm:gap-8">
             {" "}
             {services.map((service, index) => {
               const Icon = service.icon;

@@ -25,7 +25,7 @@ const qualityCards = [
 const Quality = () => {
   return (
     <>
-      <section className="container mx-auto px-20 ">
+      <section className="container mx-auto px-20  md:block hidden">
         <div className="text-center mb-12 ">
           <h2 className="md:text-3xl lg:text-x4l font-bold text-black mb-3">
             Our Commitment To Quality & Safety

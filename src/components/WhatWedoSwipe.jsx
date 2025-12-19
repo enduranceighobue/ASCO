@@ -72,7 +72,7 @@ const WhatWeDoCard = ({ image, title, desc }) => {
 const WhatWeDoSwipe = () => {
   return (
     <>
-      <div className="container w-full mx-auto py-16 px-25 space-y-6 gap-2 ">
+      <div className="container w-full mx-auto py-16 px-25 space-y-6 gap-2 md:block hidden ">
         <h1 className="text-4xl font-bold text-center ">
           Our Security Services
         </h1>
@@ -89,7 +89,7 @@ const WhatWeDoSwipe = () => {
               768: { slidesPerView: 2 },
               1280: { slidesPerView: 3 },
             }}
-            className="relative max-w-6xl mx-auto "
+            className="relative md:max-w-6xl mx-auto "
           >
             {whatwedo.map((item, index) => (
               <SwiperSlide key={index}>

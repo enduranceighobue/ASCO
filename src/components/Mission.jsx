@@ -1,5 +1,5 @@
-import MissionImg from "../assets/mission.png"
-import Vision from "../assets/vision.png"
+import MissionImg from "../assets/guar.jpeg";
+import Vision from "../assets/all.jpeg";
 import visionbg from "../assets/visionbg.png";
 
 

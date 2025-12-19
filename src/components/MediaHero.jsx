@@ -17,7 +17,7 @@ export default function MediaHero() {
             <img
               src={aboutbg}
               alt=""
-              className="absolute -right-10   object-cover w-100 h-100 "
+              className="absolute -right-10   object-cover w-100 h-100 md:block hidden"
             />
             <div />
 

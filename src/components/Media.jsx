@@ -67,7 +67,7 @@ const Media = () => {
     <>
       <MediaHero />
 
-      <section className="">
+      <section className=" ">
         <div className="w-full  flex flex-col items-center bg-[#ffffff] p-4 ">
           {/* Container for images */}
           <div className="w-full max-w-4xl flex flex-col gap-6 ">
