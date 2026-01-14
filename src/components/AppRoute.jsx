@@ -14,6 +14,8 @@ const OurSpread = lazy(() => import("../components/OurSpread"));
 const Media = lazy(() => import("../components/Media"));
 const Escort = lazy(() => import("../components/Escort"));
 const ContactUs = lazy(() => import("../components/ContactUs"));
+const SecurityAssessmentForm = lazy(() => import("../pages/SecurityAssessmentForm.jsx"));
+
 
 
 
@@ -91,6 +93,16 @@ export default function AppRoutes() {
           element: (
             <Suspense>
               <ContactUs />
+            </Suspense>
+          ),
+        },
+
+        {
+          path: "security",
+
+          element: (
+            <Suspense>
+              <SecurityAssessmentForm />
             </Suspense>
           ),
         },

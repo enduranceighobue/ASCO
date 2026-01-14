@@ -1,6 +1,8 @@
 import React from "react";
 import Cctv from "../assets/bxs_cctv.png";
 import Herobg from "../assets/ascohero.png";
+import { NavLink, Link } from "react-router-dom";
+
 import Security from "../assets/securityfile.png"; // use transparent PNG / properly cropped guard
 
 export default function Hero() {
@@ -20,24 +22,24 @@ export default function Hero() {
 
       {/* HERO CONTENT */}
       <div className="relative z-30 max-w-6xl mx-auto px-6 text-center pt-16 md:pt-24 pb-6">
-        <h1 className="text-xl md:text-5xl lg:text-6xl animate__animated animate__fadeInDown font-semibold mt-4 text-white">
+        <h1 className="text-xl md:text-5xl lg:text-6xl animate__animated animate__backInDown font-semibold mt-4 text-white">
           Security Built on Trust. <br />
           Protection Backed by Expertise.
         </h1>
 
         <div className="mt-4">
-          <p className=" max-w-2xl mx-auto text-white/90 animate__animated animate__fadeInUp text-sm md:text-lg ">
+          <p className=" max-w-2xl mx-auto text-white/90 animate__animated animate__backInDown text-sm md:text-lg ">
             Professional security officers, advanced surveillance systems,
           </p>
 
-          <p className="max-w-2xl mx-auto text-white/90 text-sm animate__animated animate__fadeInUp md:text-lg">
+          <p className="max-w-2xl mx-auto text-white/90 text-sm animate__animated animate__backInDown md:text-lg">
             and 24/7 emergency response protecting organizations nationwide.
           </p>
         </div>
 
-        <button className="mt-7 inline-block bg-[#0ea5e9] text-white px-6 py-2 rounded-full hover:bg-blue-500 transition">
+      <Link to="/security"> <button className="mt-7 cursor-pointer inline-block bg-[#0ea5e9] text-white px-6 py-2 rounded-full hover:bg-blue-500 transition">
           Request Assessment
-        </button>
+        </button></Link>
       </div>
 
       {/* FOREGROUND GUARD - absolute so it overlaps the diagonal white shape */}

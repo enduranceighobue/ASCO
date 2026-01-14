@@ -71,7 +71,7 @@ const Navbar = () => {
 
           {/* Contact Button */}
           <Link to="/contactus" onClick={closeMobileMenu}>
-            <button className="hidden md:flex px-4 py-1 rounded-full bg-[#0080bb] text-white hover:bg-blue-500 transition">
+            <button className="hidden md:flex px-4 py-1 cursor-pointer rounded-full bg-[#0080bb] text-white hover:bg-blue-500 transition">
               Contact Us
             </button>
           </Link>
@@ -105,7 +105,7 @@ const Navbar = () => {
               ))}
 
               <Link to="/contactus" onClick={closeMobileMenu}>
-                <button className="bg-[#0281bc] text-white px-6 py-3 rounded-md w-fit">
+                <button className="bg-[#0281bc] cursor-pointer text-white px-6 py-3 rounded-md w-fit">
                   Contact Us
                 </button>
               </Link>

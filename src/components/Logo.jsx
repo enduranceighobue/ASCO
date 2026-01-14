@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 import logo from "../assets/logoicon.svg";
 
 export default function Logo() {

@@ -4,6 +4,8 @@ import aboutimg from "../assets/About.png";
 import CountUpOnView from "../components/CountUpOnView";
 import rectangle from "../assets/Rectangle.png";
 import cctvtwo from "../assets/cctvtwo.png";
+import { NavLink, Link } from "react-router-dom";
+
 
 
 
@@ -22,9 +24,9 @@ const AboutUs = () => {
 
       <section className="container mx-auto px-4 relative overflow-hidden sm:px-6 lg:px-10 py-20 ">
         {/* Header */}
-       <div>
-        <img src={cctvtwo} className="absolute bottom-0 right-0 md:block hidden" alt="" />
-       </div>
+        <div>
+          <img src={cctvtwo} className="absolute bottom-0 right-0 md:block hidden" alt="" />
+        </div>
 
         {/* Main Grid */}
         <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -67,7 +69,7 @@ const AboutUs = () => {
             </p>
 
             <p className="text-black ">
-             As a Federal Government–licensed security company, we combine trained personnel, advanced surveillance systems, and a customer-first mindset to protect people, property, and critical infrastructure.
+              As a Federal Government–licensed security company, we combine trained personnel, advanced surveillance systems, and a customer-first mindset to protect people, property, and critical infrastructure.
             </p>
 
             {/* Features */}
@@ -88,21 +90,21 @@ const AboutUs = () => {
 
                   </div>
                   <div>
-                    
+
                   </div>
                 </div>
               ))}
             </div>
-            <button
-          
-                className="bg-[#0080bb] text-white px-6 text-sm py-2 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:bg-blue-100 hover:text-blue-800 hover:shadow-xl transform hover:-translate-y-1"
-              >
-              Learn More About ASCO 
-                <ArrowRight className="h-3 w-3" />
-              </button>
+            <Link to="/about"><button
+
+              className="bg-[#0080bb] text-white px-6 text-sm py-2 md:mx-0 mx-5 rounded-full flex items-center gap-2 transition-all duration-300 shadow-lg hover:bg-blue-100 hover:text-blue-800 hover:shadow-xl transform hover:-translate-y-1"
+            >
+              Learn More About ASCO
+              <ArrowRight className="h-3 w-3" />
+            </button></Link>
           </div>
         </div>
-        
+
       </section>
 
     </>

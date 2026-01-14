@@ -2,6 +2,7 @@ import React from 'react'
 import ourspreadimg from "../assets/spreadimgone.png";
 import ourspreadimgtwo from "../assets/spreadimgtwo.png";
 import SpreadHero from './SpreadHero';
+import { Link } from "react-router-dom";
 
 
 
@@ -58,12 +59,12 @@ const OurSpread = () => {
           </p>
 
           <p className='text-[20px] text-[#050505]'>cities.</p>
-          <button
+      <Link to="/security"><button
             type="submit"
             className="w-fit mx-auto bg-[#0080bb] cursor-pointer mt-10 text-white py-2 px-6 rounded-full  hover:bg-[#005f9a] transition"
           >
             Request a Security Assessment
-          </button>
+          </button></Link>
         </div>
       </section>
 

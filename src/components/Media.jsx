@@ -3,7 +3,7 @@ import mediaone from "../assets/mediaone.png";
 import mediathree from "../assets/mediathree.png";
 import AboutHero from "./AboutHero";
 import garrett from "../assets/garrett.png";
-
+import { Link } from "react-router-dom";
 import awardone from "../assets/awardone.png";
 import awardtwo from "../assets/awardtwo.png";
 import awardthree from "../assets/awardthree.png";
@@ -36,15 +36,15 @@ const Media = () => {
   const [selectedImageThree, setSelectedImageThree] = useState(null);
 
   const products = [
-    { id: 1, title: "CCTV", image: awardone },
-    { id: 2, title: "Fire Alarm System", image: awardtwo },
-    { id: 3, title: "Metal Detector", image: awardthree },
-    { id: 4, title: "Biometric Access", image: awardfour },
-    { id: 5, title: "Card Access Control", image: awardfive },
-    { id: 6, title: "Radio Communication", image: awardsix },
-    { id: 7, title: "Real Time Patrol Device", image: awardseven },
-    { id: 8, title: "Turnstiles", image: awardeight },
-    { id: 9, title: "SOS Device", image: awardnine },
+    { id: 1, title: "Employers Excellence Award", titlee: "NECA 2022", image: awardone },
+    { id: 2, title: "Global Quality Excellence", titlee: "NECA 2023", image: awardtwo },
+    { id: 3, title: "Employers Excellence Award", title: "NECA 2020", image: awardthree },
+    { id: 4, title: "National Brand Innovation Award", titlee: "NBIA 2022", image: awardfour },
+    { id: 5, title: "Standard Excellence Award", titlee: "SEA,2022", image: awardfive },
+    { id: 6, title: "Business Times,100", titlee: " NBMIM,2024", image: awardsix },
+    { id: 7, title: "International Institute Of Profeesional Security", titlee: "ISCA,2019", image: awardseven },
+    { id: 8, title: "Going Beyound Limit", titlee: "NECA,2021", image: awardeight },
+    { id: 9, title: " Association Of license Private Security Practitioners Of Nigeria", titlee: " ALPSPN,2017", image: awardnine },
   ];
 
   const electronics = [
@@ -67,7 +67,7 @@ const Media = () => {
     <>
       <MediaHero />
 
-      <section className=" ">
+      <section className=" md:block hidden ">
         <div className="w-full  flex flex-col items-center bg-[#ffffff] p-4 ">
           {/* Container for images */}
           <div className="w-full max-w-4xl flex flex-col gap-6 ">
@@ -153,10 +153,16 @@ const Media = () => {
                   <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-10">
                     <img
                       src={product.image}
-                      alt=""
+                      alt={product.title}
                       className="object-cover w-full h-full"
                     />
                   </div>
+                  <p className="text-center text-sm font-semibold text-gray-800">
+                    {product.title}
+                  </p>
+                  <p className="text-center text-sm font-semibold text-gray-800">
+                    {product.titlee}
+                  </p>
                 </div>
               ))}
             </div>
@@ -236,15 +242,100 @@ const Media = () => {
               Ready to secure your organisation
             </h2>
 
-            <button
+             <Link to="/security"><button
               type="submit"
               className="w-fit mx-auto bg-[#0080bb] cursor-pointer mt-10 text-white py-2 px-6 rounded-full  hover:bg-[#005f9a] transition"
             >
               Request a Security Assessment
-            </button>
+            </button></Link>
           </div>
         </section>
       </section>
+
+      <section className="md:hidden block p-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-items-center sm:gap-8">
+          <div className="container w-[90%] mx-auto py-10 mt-10  space-y-4">
+            <h1 className="md:text-4xl font-bold text-center mb-3">
+              Training & Operations Room.
+            </h1>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto ">
+              Our officers undergo continuous training.
+            </p>
+          </div>
+
+          {trainings.map((training, index) => (
+            <div
+              key={training.id}
+              className="
+                   rounded-xl shadow-md border cursor-pointer 
+                    hover:shadow-xl transition-shadow duration-300"
+
+              onClick={() => setSelectedImageThree(training.image)}
+            >
+              {/* REMOVE bg-white and REMOVE extra margin */}
+              <div className="">
+                <img
+                  src={training.image}
+                  alt=""
+                  className="text-white"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-center justify-items-center sm:gap-8">
+          <div className="container w-[90%] mx-auto py-10 mt-10 space-">
+            <h1 className="md:text-3xl font-bold text-center   ">
+              AWARDS & CERTIFICATES.
+            </h1>
+            <p className="text-center text-gray-600 max-w-2xl  mx-auto">
+              Awards that reflect our pursuit of quality.
+            </p>
+          </div>
+          {products.map((product, index) => (
+            <div
+              key={product.id}
+              className="
+              bg-white rounded-xl shadow-md border p-4 cursor-pointer 
+              hover:shadow-xl transition-shadow duration-300
+            "
+              onClick={() => setSelectedImage(product.image)}
+            >
+              <div className="">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className=""
+                />
+              </div>
+              <p className="text-center text-sm font-semibold text-gray-800">
+                {product.title}
+              </p>
+              <p className="text-center text-sm font-semibold text-gray-800">
+                {product.titlee}
+              </p>
+            </div>
+          ))}
+        </div>
+
+
+
+
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
     </>
   );
 };

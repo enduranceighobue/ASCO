@@ -1,6 +1,7 @@
 import React from "react";
 import Security from "../assets/securityfile.png"; // use transparent PNG / properly cropped guard
 import aboutbg from "../assets/aboutbg.svg";
+import { Link } from "react-router-dom";
 
 export default function ServiceHero() {
   return (
@@ -24,21 +25,13 @@ export default function ServiceHero() {
           property, and critical operations across Nigeria.{" "}
         </p>
 
-        <button
+        <Link to="/security"><button
           type="submit"
           className="w-fit mx-auto bg-[#0080bb] cursor-pointer mt-6 text-white py-2 px-6 rounded-full  hover:bg-[#005f9a] transition"
         >
           Request a Security Assessment
-        </button>
+        </button></Link>
       </div>
-
-      {/* ANGLED WHITE SECTION (clip-path) */}
-      <div />
-
-      {/* CCTV ICON */}
-
-      {/* small spacer so section doesn't overlap next content too much */}
-      {/* <div className="relative z-0 h-[160px] bg-black" /> */}
     </section>
   );
 }

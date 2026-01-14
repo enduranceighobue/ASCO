@@ -1,144 +1,188 @@
 import React from "react";
-import escort from "../assets/escort.png";
+import escort from "../assets/escotone.jpeg";
 import EscortHero from "./EscortHero";
+import blue from "../assets/blue.svg"
+import bluedot from "../assets/bluedot.svg";
+
+
 const Escort = () => {
+
+const qualityCards = [
+  {
+    title: "Executive Escort",
+  },
+  {
+    title: "Secure Travel Escort",
+  },
+  {
+    title: "Diplomatic Protocol Support",
+  },
+  {
+    title: "Asset Escort",
+  },
+];
+
+
   return (
     <>
       <EscortHero />
 
       <section>
-        <div className="w-full  flex flex-col items-center bg-[#ffffff] p-4 ">
+        <div className="w-full  flex flex-col items-center bg-[#ffffff] p-4 mt-25 ">
           {/* Container for images */}
           <div className="w-full mx-auto container flex flex-col gap-6 ">
-            {/* Top Image */}
-
-            <div className="container w-[90%] mx-auto py-10 space-y-3">
-              <h1 className="md:text-4xl font-bold text-center ">
-                Training & Operations Room.
-              </h1>
-              <p className="text-center text-gray-600 max-w-2xl mx-auto ">
-                Our officers undergo continuous training.
-              </p>
-            </div>
-            <div className="w-full  ">
-              <img
-                src={escort}
-                alt="Top"
-                className="w-full h-auto object-cover rounded-lg "
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="min-h-screen w-full bg-[#eef2f6] flex justify-center items-start py-16 px-4">
-          <div className="w-full max-w-6xl bg-white/0">
-            {/* Title */}
-            <div className="text-center mb-12">
-              <h1 className="text-3xl md:text-4xl font-bold text-[#1A1F36]">
-                Request an Escort Service
-              </h1>
-              <p className="text-gray-600 mt-2">
-                Please enter your correct details
-              </p>
-            </div>
-
-            {/* Form */}
-            <form className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {/* Left Section */}
-              <div>
-                <h2 className="text-xl font-semibold text-[#1A1F36] mb-4">
-                  Your Details
-                </h2>
-
-                <div className="space-y-6">
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-                  />
-
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Organization (Optional)"
-                    className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-                  />
-                </div>
+           <div className="flex flex-col md:flex-row  gap-10">
+              {/* RIGHT — IMAGE */}
+              <div className="w-1/2 flex justify-center">
+                <img
+                  src={escort}
+                  alt="Escort Management"
+                  className="rounded-xl shadow-xl md:block hidden w-[500px] h-[480px] object-cover 
+                             hover:scale-105 transition-transform duration-500"
+                />
               </div>
 
-              {/* Right Section */}
-              <div>
-                <h2 className="text-xl font-semibold text-[#1A1F36] mb-4">
-                  Service Details
-                </h2>
-
-                <div className="space-y-6">
-                  <select className="w-full p-4 rounded-xl bg-white border border-gray-300 text-gray-500 focus:ring-2 focus:ring-blue-400 outline-none">
-                    <option value="">Escort Type</option>
-                    <option value="armed">Armed Escort</option>
-                    <option value="unarmed">Unarmed Escort</option>
-                  </select>
-
-                  <input
-                    type="text"
-                    placeholder="Preferred Date(s)"
-                    className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-                  />
-
-                  <input
-                    type="text"
-                    placeholder="Destination / Route"
-                    className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
-                  />
-
-                  <textarea
-                    rows="4"
-                    placeholder="Additional Details"
-                    className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none resize-none"
-                  />
-                </div>
+              <div className="md:w-1/2 flex flex-col gap-4 ">
+              <div className="flex gap-3 px-7">
+                <img src={bluedot} alt="blue-icon-svg" />
+                
+                <h2 className="font-bold text-2xl">What We Offer</h2>
               </div>
-            </form>
 
-            {/* Submit Button */}
-            <div className="flex justify-center mt-12">
-              <button
-                type="submit"
-                className="bg-[#0080bb] text-white px-8 py-3 rounded-full hover:bg-blue-700 transition font-medium"
-              >
-                Submit Enquiry
-              </button>
+                {qualityCards.map((card, index) => (
+
+                  <div
+                    key={index}
+                    className="bg-white shadow-lg rounded-lg p-5 flex gap-3  
+                             transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  >
+                    <div className="mt-4">
+                      <img src={blue} alt="" className="w-8 " />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-black mt-4">
+                        {card.title}
+                      </h3>
+                    </div>
+
+
+                  </div>
+                ))}
+              </div>
             </div>
+     </div>
+        </div>
+      
+
+      <div className="min-h-screen w-full bg-[#eef2f6] flex justify-center items-start py-16 px-4">
+        <div className="w-full max-w-6xl bg-white/0">
+          {/* Title */}
+          <div className="text-center mb-12">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#1A1F36]">
+              Request an Escort Service
+            </h1>
+            <p className="text-gray-600 mt-2">
+              Please enter your correct details
+            </p>
+          </div>
+
+          {/* Form */}
+          <form className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Left Section */}
+            <div>
+              <h2 className="text-xl font-semibold text-[#1A1F36] mb-4">
+                Your Details
+              </h2>
+
+              <div className="space-y-6">
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Phone Number"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Organization (Optional)"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+              </div>
+            </div>
+
+            {/* Right Section */}
+            <div>
+              <h2 className="text-xl font-semibold text-[#1A1F36] mb-4">
+                Service Details
+              </h2>
+
+              <div className="space-y-6">
+                <select className="w-full p-4 rounded-xl bg-white border border-gray-300 text-gray-500 focus:ring-2 focus:ring-blue-400 outline-none">
+                  <option value="">Escort Type</option>
+                  <option value="armed">Armed Escort</option>
+                  <option value="unarmed">Unarmed Escort</option>
+                </select>
+
+                <input
+                  type="text"
+                  placeholder="Preferred Date(s)"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Destination / Route"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none"
+                />
+
+                <textarea
+                  rows="4"
+                  placeholder="Additional Details"
+                  className="w-full p-4 rounded-xl bg-white border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none resize-none"
+                />
+              </div>
+            </div>
+          </form>
+
+          {/* Submit Button */}
+          <div className="flex justify-center mt-12">
+            <button
+              type="submit"
+              className="bg-[#0080bb] text-white px-8 py-3 rounded-full hover:bg-blue-700 transition font-medium"
+            >
+              Submit Enquiry
+            </button>
           </div>
         </div>
+      </div>
 
-        <div className='"min-h-screen overflow-hidden w-full  py-16 flex flex-col items-center px-6'>
-          <h2 className="text-4xl  text-[#1d2140] font-bold mb-6">
-            Still have urgent needs?
-          </h2>
+      <div className='"min-h-screen overflow-hidden w-full  py-16 flex flex-col items-center px-6'>
+        <h2 className="text-4xl  text-[#1d2140] font-bold mb-6">
+          Still have urgent needs?
+        </h2>
 
-          <p className="text-[20px] text-[#050505]">
-            For immediate escort requests, call: +234 (809) 236-6841
-          </p>
-          <button
-            type="submit"
-            className="w-fit mx-auto bg-[#0080bb] cursor-pointer mt-10 text-white py-2 px-6 rounded-full  hover:bg-[#005f9a] transition"
-          >
-            Request Escort Service
-          </button>
-        </div>
-      </section>
+        <p className="text-[20px] text-[#050505]">
+          For immediate escort requests, call: +234 (809) 236-6841
+        </p>
+        <button
+          type="submit"
+          className="w-fit mx-auto bg-[#0080bb] cursor-pointer mt-10 text-white py-2 px-6 rounded-full  hover:bg-[#005f9a] transition"
+        >
+          Request Escort Service
+        </button>
+      </div>
+    </section >
     </>
   );
 };

@@ -8,6 +8,8 @@ import Icon2 from "../assets/bx_cctv.svg";
 import Icon3 from "../assets/lsicon_user-crowd.svg";
 import arrowleft from "../assets/arrowleft.svg";
 import arrowright from "../assets/arrowright.svg";
+import { NavLink, Link } from "react-router-dom";
+
 
 const whatwedo = [
   {
@@ -97,12 +99,12 @@ const WhatWeDoSwiper = () => {
         <h2 className="text-4xl  text-[#1d2140] font-bold">
           Ready to secure your organisation
         </h2>
-        <button
+     <Link to="/security"><button
           type="submit"
           className="w-fit mx-auto bg-[#0080bb] cursor-pointer mt-6 text-white py-2 px-6 rounded-full  hover:bg-[#005f9a] transition"
         >
           Request a Security Assessment
-        </button>
+        </button></Link>
       </div>
 
     </div>
