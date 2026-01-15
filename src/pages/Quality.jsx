@@ -9,15 +9,15 @@ const qualityCards = [
     description: "Our processes comply with international quality standards and are regularly audited for effectiveness.",
   },
   {
-    title: "Continuous Improvement",
+    title: "Sedex Certification",
     description: "We continually improve our process performance and service delivery based on feedback, audits, and reviews.",
   },
   {
-    title: "Process & Service Excellence",
+    title: "Ecovadis Certification",
     description: "From recruitment to deployment, every step is documented and measured to ensure consistent, reliable security services.",
   },
   {
-    title: "Safty & Compliance",
+    title: "Duns and Bradstreet",
     description: "We prioritise the safety of our clients, personnel, and assets while meeting all regulatory and industry requirements.",
   },
 ];

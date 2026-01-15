@@ -130,8 +130,11 @@ const qualityCards = [
               <div className="space-y-6">
                 <select className="w-full p-4 rounded-xl bg-white border border-gray-300 text-gray-500 focus:ring-2 focus:ring-blue-400 outline-none">
                   <option value="">Escort Type</option>
-                  <option value="armed">Armed Escort</option>
-                  <option value="unarmed">Unarmed Escort</option>
+                  <option value="armed">Airport Dropoff</option>
+                  <option value="unarmed">Airport Pickup</option>
+                   <option value="armed">Pin Down</option>
+                  <option value="unarmed">Trade Visit</option>
+                   <option value="armed">Pickup/Dropoff</option>
                 </select>
 
                 <input

@@ -15,36 +15,36 @@ import {
 const services = [
   {
     icon: HardHat,
-    title: "",
+    title: "Man-guarding Security",
     description:
       "Provison of trained security guards, security dogs & dog handlers.",
   },
   {
     icon: Factory,
-    title: "",
+    title: "Security for Social EVents",
     description:
       "Provision of security for large events and gatherings.",
   },
   {
     icon: Calendar,
-    title: "",
+    title: "Emergency Response",
     description: "Our emergency response unit delivers swift, coordinated action",
   },
   {
     icon: Shield,
-    title: "",
+    title: "Professional Training",
     description:
       "Security awareness training for clients.",
   },
   {
     icon: Hospital,
-    title: "",
+    title: "Electronic Security",
     description: "Supply and maintenance of electronic security.",
   },
 
   {
     icon: ShieldCheck,
-    title: "",
+    title: "Armed Escort protection",
     description: "Executive protection and armed escorts..",
   },
 ];
@@ -70,7 +70,7 @@ const Service = () => {
                 className="bg-white p-6 sm:p-8 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="w-12 h-12 sm:w-14 sm:h-14 bg-[#0080bb] rounded-full flex items-center justify-center mb-4 sm:mb-6">
-                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+                  <Icon className="w-6 h-6 sm:w-7 sm:h-7 tems-center text-white" />
                 </div>
                 <h3 className="text-xl sm:text-2xl font-bold text-[#291a06] mb-2 sm:mb-3">{service.title}</h3>
                 <p className="text-sm sm:text-base text-[#291a06] leading-relaxed">{service.description}</p>
