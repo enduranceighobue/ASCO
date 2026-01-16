@@ -72,7 +72,7 @@ const Navbar = () => {
                 Who We Are
               </button>
 
-              <div className="absolute top-full left-0 mt-2 bg-white rounded shadow-lg min-w-max
+              <div className="absolute top-full left-0 mt-4 bg-white rounded shadow-lg min-w-max
                   opacity-0 invisible group-hover:opacity-100 group-hover:visible
                   transition-all duration-200">
                 <NavLink

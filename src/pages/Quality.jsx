@@ -10,15 +10,15 @@ const qualityCards = [
   },
   {
     title: "Sedex Certification",
-    description: "We continually improve our process performance and service delivery based on feedback, audits, and reviews.",
+    description: "Promotes ethical labor practices, transparency, responsible sourcing, and supply chain accountability.",
   },
   {
     title: "Ecovadis Certification",
-    description: "From recruitment to deployment, every step is documented and measured to ensure consistent, reliable security services.",
+    description: "Evaluates sustainability performance across environment, ethics, labor, and procurement..",
   },
   {
     title: "Duns and Bradstreet",
-    description: "We prioritise the safety of our clients, personnel, and assets while meeting all regulatory and industry requirements.",
+    description: " This provides ASCO with business credibility, financial risk insights, and global company identification..",
   },
 ];
 
