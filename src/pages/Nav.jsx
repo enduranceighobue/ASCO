@@ -38,7 +38,26 @@ const Nav = () => {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center space-x-8  hover:text-[#0080bb] cursor-pointer font-semibold absolute left-1/2 -translate-x-1/2">
             <Link to="/" className={linkStyle}>Home</Link>
-            <Link to="/about" className={linkStyle}>About Us</Link>
+            {/* About Us Dropdown */}
+            <div className="relative group">
+              <Link to="/about" className={linkStyle}>
+                About Us
+              </Link>
+
+              {/* Dropdown */}
+              <div
+                className="absolute left-0 top-full pt-2 hidden group-hover:block z-50"
+              >
+                <div className="w-40 bg-white rounded-md shadow-lg">
+                  <Link
+                    to="/fasco"
+                    className="block px-4 py-2 text-gray-800 hover:bg-[#0080bb] hover:text-white rounded-md"
+                  >
+                    FASCO
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link to="/service" className={linkStyle}>Services</Link>
             <Link to="/spread" className={linkStyle}>Our Spread</Link>
             <Link to="/media" className={linkStyle}>Media</Link>
@@ -49,8 +68,8 @@ const Nav = () => {
           <Link to="/contact" onClick={closeMobileMenu}>
             <button
               className={`hidden md:flex px-3 py-1 rounded-full transition ${isScrolled
-                  ? "bg-[#0080bb] text-white hover:bg-[#046a97]"
-                  : "bg-[#0080bb] text-white hover:bg-gray-200 hover:text-[#0080bb]"
+                ? "bg-[#0080bb] text-white hover:bg-[#046a97]"
+                : "bg-[#0080bb] text-white hover:bg-gray-200 hover:text-[#0080bb]"
                 }`}
             >
               Contact Us

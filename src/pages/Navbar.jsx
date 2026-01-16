@@ -4,8 +4,6 @@ import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/ascoicon.svg";
 
 const navItems = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
   { name: "Services", path: "/service" },
   { name: "Our Spread", path: "/spread" },
   { name: "Media", path: "/media" },
@@ -15,6 +13,7 @@ const navItems = [
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -24,44 +23,82 @@ const Navbar = () => {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
-  const baseLink =
-    "transition-colors duration-300 cursor-pointer";
+  const baseLink = "transition-colors duration-300 cursor-pointer";
 
   const desktopLink = isScrolled
     ? "text-black hover:text-[#0281bc]"
     : "text-white hover:text-[#0281bc]";
 
-  const activeLink =
-    "text-[#0281bc] font-semibold ";
+  const activeLink = "text-[#0281bc] font-semibold";
 
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
+        ? "bg-white/95 backdrop-blur-md shadow-lg"
+        : "bg-transparent"
         }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20 relative">
 
           {/* Logo */}
-          <Link to="/" onClick={closeMobileMenu} className="flex items-center gap-2">
+          <Link
+            to="/"
+            onClick={closeMobileMenu}
+            className="flex items-center gap-2"
+          >
             <img src={logo} alt="Logo" className="w-7 h-7 rounded-full" />
-            <h3 className={isScrolled ? "text-black" : "text-white"}>ASCO</h3>
+            <h3 className={isScrolled ? "text-black" : "text-white"}>
+              ASCO
+            </h3>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-7 absolute left-1/2 -translate-x-1/2">
+            {/* HOME */}
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                `${baseLink} ${isActive ? activeLink : desktopLink}`
+              }
+            >
+              Home
+            </NavLink>
+
+            {/* ABOUT US */}
+            <div className="relative group">
+              <button className={`${baseLink} ${desktopLink}`}>
+                Who We Are
+              </button>
+
+              <div className="absolute top-full left-0 mt-2 bg-white rounded shadow-lg min-w-max
+                  opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                  transition-all duration-200">
+                <NavLink
+                  to="/about"
+                  className="block px-4  text-gray-800 hover:bg-[#0281bc] hover:text-white whitespace-nowrap"
+                >
+                  About ASCO
+                </NavLink>
+                <NavLink
+                  to="/fasco"
+                  className="block px-4  text-gray-800 hover:bg-[#0281bc] hover:text-white whitespace-nowrap"
+                >
+                  FSS Alliance
+                </NavLink>
+              </div>
+            </div>
+
+
+            {/* OTHER LINKS */}
             {navItems.map(({ name, path }) => (
               <NavLink
                 key={path}
                 to={path}
                 end={path === "/"}
                 className={({ isActive }) =>
-                  `${baseLink} ${isActive
-                    ? "text-[#0281bc] font-semibold"
-                    : desktopLink
-                  }`
+                  `${baseLink} ${isActive ? activeLink : desktopLink}`
                 }
               >
                 {name}
@@ -78,7 +115,8 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden ${isScrolled ? "text-black" : "text-white"}`}
+            className={`md:hidden ${isScrolled ? "text-black" : "text-white"
+              }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}

@@ -1,0 +1,40 @@
+import React from "react";
+import aboutherobg from "../assets/adobethree.png";
+import aboutbg from "../assets/aboutbg.svg";
+
+export default function FascoHero() {
+  return (
+    <div className="  bg-[#1D2140] ">
+
+      <section className="relative mx-auto container w-full md:h-[300px] overflow-hidden">
+        {/* BACKGROUND IMAGE + OVERLAY */}
+        <div className="absolute   h-full  " />
+        <img
+                src={aboutbg}
+                alt=""
+                className="absolute -right-10   object-cover w-100 h-100 md:block hidden "
+              />
+        <div />
+
+        {/* HERO CONTENT */}
+        <div className="relative z-30 max-w-6xl mx-auto px-6  text-center pt-16 md:pt-24 pb-6">
+          <h1 className=" md:text-4xl font-bold text-white mb-4">
+            
+          </h1>
+          <h1 className=" md:text-4xl font-bold text-white mb-4">
+            
+          </h1>
+          <p className="text-white  md:text-xl max-w-3xl mx-auto opacity-60">
+          </p>
+
+        </div>
+
+        <div className=" mx-auto container">
+
+
+          
+        </div>
+      </section>
+    </div>
+  );
+}

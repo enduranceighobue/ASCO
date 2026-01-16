@@ -150,7 +150,7 @@ const Media = () => {
                   }}
                   onClick={() => setSelectedImage(product.image)}
                 >
-                  <div className="w-full h-40 bg-gray-100 rounded-lg overflow-hidden mb-10">
+                  <div className="w-full h-70 bg-gray-100 rounded-lg overflow-hidden mb-10">
                     <img
                       src={product.image}
                       alt={product.title}
@@ -312,7 +312,7 @@ const Media = () => {
               <p className="text-center text-sm font-semibold text-gray-800">
                 {product.title}
               </p>
-              <p className="text-center text-sm font-semibold text-gray-800">
+              <p className="text-center text-sm  text-gray-800">
                 {product.titlee}
               </p>
             </div>
